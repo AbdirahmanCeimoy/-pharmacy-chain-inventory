@@ -1,0 +1,495 @@
+{
+  "app": {
+    "name": "PharmaTrack",
+    "tagline": "Batch-level inventory and point-of-sale for a multi-branch pharmacy chain"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "pos": "Point of Sale",
+    "medicines": "Medicines",
+    "batches": "Batches",
+    "suppliers": "Suppliers",
+    "purchaseOrders": "Purchase Orders",
+    "reorder": "Reorder",
+    "stockCounts": "Stock Count",
+    "inventory": "Inventory",
+    "transfers": "Transfers",
+    "returns": "Returns",
+    "reports": "Reports",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "dashboard": {
+    "eyebrow": "Pharmacy chain overview",
+    "title": "Dashboard",
+    "subtitle": "Welcome, {{name}}. Here is what is happening across your pharmacy chain today.",
+    "subtitleBranch": "Welcome, {{name}}. Here is what is happening at {{branch}} today.",
+    "kpis": {
+      "todayRevenue": "Today's revenue",
+      "todayRevenueHint": "Completed sales since midnight",
+      "unitsSold": "Units sold today",
+      "unitsSoldHint": "Total medicine units across all sales",
+      "lowStock": "Low stock items",
+      "lowStockHint": "Below 14-day cover",
+      "expiring": "Expiring in 30 days",
+      "expiringHint": "{{value}} at cost",
+      "pendingPos": "Purchase orders in progress",
+      "pendingPosHint": "Submitted, approved or partially received"
+    },
+    "trend": {
+      "title": "Revenue vs cost — last 7 days",
+      "subtitle": "Honest profit: cost comes from each batch actually sold.",
+      "revenue": "Revenue",
+      "cost": "Cost",
+      "profit": "Profit"
+    },
+    "alerts": {
+      "expiringTitle": "Expiring soon",
+      "expiringEmpty": "No batches expire in the next 30 days.",
+      "expiringViewAll": "View all batches",
+      "daysLeft": "{{n}}d left",
+      "pendingTitle": "Purchase orders awaiting action",
+      "pendingEmpty": "No purchase orders waiting on you.",
+      "pendingViewAll": "View all purchase orders"
+    },
+    "errors": {
+      "loadFailed": "Could not load the dashboard. Try reloading the page."
+    }
+  },
+  "landing": {
+    "eyebrow": "Pharmacy chain, built for Somalia",
+    "ctaPrimary": "Open the app",
+    "ctaSecondary": "Learn more",
+    "bullets": {
+      "fefo": "First-expiry-first-out",
+      "race": "Race-safe POS",
+      "bilingual": "English + Somali"
+    },
+    "hero": {
+      "headline": "Stop losing money to expired stock.",
+      "lead": "Batch-level inventory across every branch, First-Expiry-First-Out deduction at the counter, and race-safe sales. So two cashiers can never oversell the last unit.",
+      "sampleHint": "Receipts carry batch costs so profit per branch is honest, not averaged."
+    },
+    "problem": {
+      "title": "Three problems every pharmacy chain hits.",
+      "body": "Expiry losses. Phantom stock-outs. No clear view of which branch actually makes money. This system is built to kill all three."
+    },
+    "problems": {
+      "problem1": {
+        "title": "Expired on one shelf, out-of-stock on another",
+        "body": "Without batch-level visibility and transfers, stock rots in one branch while another runs dry."
+      },
+      "problem2": {
+        "title": "Manual counting, silent errors",
+        "body": "No batches, no audit trail. A missing box looks like theft three weeks later. Too late to recover."
+      },
+      "problem3": {
+        "title": "Owners can't see profit per branch",
+        "body": "Averaged costs hide which branches are profitable. Decisions get made on hunches."
+      }
+    },
+    "features": {
+      "title": "Features",
+      "lead": "Every rule in the Somalia 10X Challenge Project 09 brief, built and tested.",
+      "items": {
+        "fefo": {
+          "title": "FEFO at the counter",
+          "body": "Every sale takes from the earliest-expiring batch first. Expired batches never sell."
+        },
+        "concurrency": {
+          "title": "Race-safe sales",
+          "body": "Two cashiers racing for the last unit? Exactly one wins. The other sees a clean out-of-stock message."
+        },
+        "transfers": {
+          "title": "Inter-branch transfers",
+          "body": "Requested → Approved (HQ above $500) → Dispatched → Received with the same batch number and expiry."
+        },
+        "expiry": {
+          "title": "Expiry dashboard",
+          "body": "Buckets for 30 / 60 / 90 days with colour-coded risk and total value at cost."
+        },
+        "profit": {
+          "title": "Honest profit per branch",
+          "body": "Cost comes from each batch actually sold. Never averaged. Returns net off revenue AND cost."
+        },
+        "controlled": {
+          "title": "Controlled drugs register",
+          "body": "Pharmacist-only, prescription required, database triggers block any edit or delete."
+        }
+      }
+    },
+    "how": {
+      "title": "How a sale works",
+      "step1": {
+        "title": "Scan or search",
+        "body": "Barcode or name lookup. Add to cart. Price is HQ-controlled and the same at every branch."
+      },
+      "step2": {
+        "title": "Pick payment",
+        "body": "Cash, EVC Plus, Zaad, eDahab. All behind a simulated adapter interface."
+      },
+      "step3": {
+        "title": "FEFO deducts",
+        "body": "SELECT…FOR UPDATE on batches ordered by expiry. The second cashier sees the updated stock. No race."
+      },
+      "step4": {
+        "title": "Receipt out",
+        "body": "Sequential receipt number (no gaps on failure), printable, COPY stamp on re-print."
+      }
+    },
+    "cta": {
+      "title": "Try the live demo",
+      "body": "A seeded database with three branches, four roles, 16 medicines and a full working POS is a click away.",
+      "demoHint": "Demo login"
+    },
+    "footer": {
+      "build": "Built for the Somalia 10X Challenge · Project 09"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "email": "Email Address",
+    "password": "Password",
+    "emailPlaceholder": "Enter Your Email Address",
+    "passwordPlaceholder": "Enter Your Password",
+    "submit": "Log In",
+    "invalid": "Invalid email or password.",
+    "forgot": "Forgot Password?",
+    "enterValidEmail": "Please enter a valid email address.",
+    "enterPassword": "Please enter your password."
+  },
+  "forgot": {
+    "title": "Reset Your Password",
+    "subtitle": "Enter the email address on your account and we will send a verification code.",
+    "sendCode": "Send Verification Code",
+    "sentNotice": "If an account exists for that email, a verification code has been sent.",
+    "backToLogin": "Back to Sign In",
+    "verifyTitle": "Enter Verification Code",
+    "verifyLead": "We sent a 6-digit code to {{email}}. The code expires in 5 minutes.",
+    "codeLabel": "Verification Code",
+    "verifyCode": "Verify Code",
+    "invalidOtp": "Please enter the 6-digit code from your email.",
+    "resend": "Resend code",
+    "resendIn": "Resend in {{seconds}}s",
+    "resent": "A new code has been sent. Please check your email.",
+    "changeEmail": "Change email",
+    "resetTitle": "Choose a New Password",
+    "resetLead": "Pick a password that is at least 8 characters and mixes letters with numbers.",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Enter Your New Password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter Your New Password",
+    "pwTooShort": "Your password must be at least 8 characters.",
+    "pwNeedsMix": "Your password must contain letters and numbers.",
+    "pwMismatch": "Passwords do not match.",
+    "pwRule": "Minimum 8 characters, with at least one letter and one number.",
+    "updatePassword": "Update Password",
+    "doneTitle": "Password Updated",
+    "doneBody": "You can now sign in with your new password.",
+    "backToLoginNow": "Return to Sign In",
+    "success": "Your password has been updated successfully."
+  },
+  "medicines": {
+    "title": "Medicines",
+    "subtitle": "HQ-controlled catalogue. The selling price is set once and is the same at every branch.",
+    "add": "Add medicine",
+    "searchPlaceholder": "Search by generic, brand or barcode",
+    "activeOnly": "Active only",
+    "empty": "No medicines match this search.",
+    "resultSuffix": "result(s)",
+    "cols": {
+      "generic": "Generic",
+      "brand": "Brand",
+      "form": "Form",
+      "strength": "Strength",
+      "unit": "Unit",
+      "price": "Price",
+      "flags": "Flags"
+    },
+    "fields": {
+      "generic": "Generic name",
+      "brand": "Brand name",
+      "form": "Form",
+      "strength": "Strength",
+      "unit": "Unit label",
+      "price": "Selling price (USD)",
+      "category": "Category (optional)",
+      "barcode": "Barcode (optional)",
+      "controlled": "Controlled drug (pharmacist + prescription required at sale)"
+    },
+    "flags": {
+      "controlled": "Controlled",
+      "inactive": "Inactive"
+    }
+  },
+  "suppliers": {
+    "title": "Suppliers",
+    "subtitle": "Vendors used on purchase orders.",
+    "add": "Add supplier",
+    "searchPlaceholder": "Search by name or phone",
+    "empty": "No suppliers match this search.",
+    "cols": {
+      "name": "Name",
+      "phone": "Phone",
+      "address": "Address",
+      "terms": "Terms"
+    },
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "address": "Address",
+      "paymentTerms": "Payment terms"
+    }
+  },
+  "po": {
+    "title": "Purchase Orders",
+    "subtitle": "Branch managers create POs; orders over $1000 require HQ approval.",
+    "new": "New purchase order",
+    "empty": "No purchase orders yet.",
+    "filterStatus": "Status:",
+    "filterAll": "All",
+    "backToList": "Back to list",
+    "createSubtitle": "For branch {{branch}}. Add one or more items, then save as draft or submit for approval.",
+    "chooseSupplier": "Choose supplier",
+    "chooseMedicine": "Choose medicine",
+    "addRow": "Add row",
+    "removeRow": "Remove row",
+    "saveDraft": "Save as draft",
+    "saveAndSubmit": "Save and submit",
+    "createdBy": "Created by",
+    "approvedBy": "Approved by",
+    "needsHqNotice": "This PO totals over ${{threshold}}. It will wait for HQ (Owner) approval after submission.",
+    "cols": {
+      "poNumber": "PO Number",
+      "branch": "Branch",
+      "supplier": "Supplier",
+      "status": "Status",
+      "total": "Total",
+      "created": "Created",
+      "actions": "",
+      "medicine": "Medicine",
+      "qty": "Qty",
+      "qtyReceived": "Received",
+      "unitCost": "Unit cost",
+      "lineTotal": "Line total"
+    },
+    "fields": {
+      "branch": "Branch",
+      "supplier": "Supplier",
+      "notes": "Notes",
+      "items": "Items"
+    },
+    "chooseBranch": "Choose branch",
+    "actions": {
+      "submit": "Submit",
+      "approve": "Approve (HQ)",
+      "cancel": "Cancel PO",
+      "receive": "Receive items"
+    }
+  },
+  "stockCounts": {
+    "title": "Stock counts",
+    "subtitle": "Start a count, enter physical qty per batch, confirm. Adjustments are logged with a reason and sales are blocked for counted medicines in the meantime.",
+    "start": "Start new count",
+    "empty": "No stock counts yet.",
+    "resume": "Resume",
+    "backToList": "Back to stock counts",
+    "detailTitle": "Stock count #{{id}}",
+    "salesBlockedNotice": "Sales are blocked at the POS for every medicine covered by this count until you submit or cancel.",
+    "cols": {
+      "when": "Started",
+      "branch": "Branch",
+      "startedBy": "Started by",
+      "status": "Status",
+      "batches": "Batches",
+      "discrepancies": "Discrepancies",
+      "netValue": "Net adjustment value",
+      "system": "System",
+      "physical": "Physical",
+      "diff": "Δ",
+      "reason": "Reason",
+      "note": "Note"
+    },
+    "actions": {
+      "submit": "Submit count",
+      "cancel": "Cancel count"
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Profit per branch and expiry loss, from real SQL. Never averaged, never hard-coded.",
+    "from": "From",
+    "to": "To",
+    "profit": {
+      "title": "Profit (daily)",
+      "hint": "Revenue minus actual batch cost. Returns net both sides.",
+      "total": "Profit (window)",
+      "empty": "No sales in the selected window."
+    },
+    "loss": {
+      "title": "Expiry loss (monthly)",
+      "hint": "Value at cost of EXPIRED and WRITE_OFF stock movements.",
+      "total": "Total loss (window)",
+      "empty": "No losses in the selected window.",
+      "top10": "Top 10 medicines lost",
+      "value": "Value lost"
+    }
+  },
+  "returns": {
+    "title": "Returns",
+    "subtitle": "Within 7 days of the sale, cashier records and manager approves. Controlled drugs cannot be returned. Expired batches are written off.",
+    "lookupTitle": "Find the original receipt",
+    "receipt": "Receipt number",
+    "lookup": "Look up",
+    "reason": "Reason for return",
+    "reasonPlaceholder": "Wrong strength / customer changed mind / damaged packaging …",
+    "reasonRequired": "Enter a reason for the return.",
+    "pickAtLeastOne": "Enter a quantity for at least one line.",
+    "noPermission": "Only MANAGER or OWNER can approve returns.",
+    "record": "Record return",
+    "recent": "Recent returns",
+    "empty": "No returns yet.",
+    "cols": {
+      "sold": "Sold",
+      "price": "Price",
+      "returnQty": "Return qty",
+      "when": "When",
+      "receipt": "Receipt",
+      "branch": "Branch",
+      "approvedBy": "Approved by",
+      "reason": "Reason",
+      "refund": "Refund"
+    }
+  },
+  "transfers": {
+    "title": "Inter-branch transfers",
+    "subtitle": "Requesting branch asks; sending branch dispatches; receiving branch confirms. Over $500 waits for HQ approval.",
+    "new": "New transfer",
+    "empty": "No transfers yet.",
+    "create": "Create transfer",
+    "createHint": "A branch requests stock FROM another branch. Below $500 total auto-approves; above requires HQ.",
+    "backToList": "Back to transfers",
+    "chooseBranch": "Choose branch",
+    "chooseBothBranches": "Pick both from and to branches.",
+    "sameBranch": "From and to branches must differ.",
+    "needItems": "Add at least one item with qty > 0.",
+    "needsHqNotice": "This transfer totals over ${{threshold}}. It will wait for HQ approval before dispatch.",
+    "requestedBy": "Requested by",
+    "approvedBy": "Approved by",
+    "shortage": "Shortage",
+    "shortageNote": "Shortage note (if receiving less than dispatched)",
+    "shortagePlaceholder": "e.g. Boxes damaged in transit",
+    "fields": {
+      "from": "From branch (sender)",
+      "to": "To branch (receiver. The requester)"
+    },
+    "cols": {
+      "transferNo": "Transfer #",
+      "from": "From",
+      "to": "To",
+      "status": "Status",
+      "value": "Value",
+      "qtyRequested": "Requested",
+      "qtyDispatched": "Dispatched",
+      "qtyReceived": "Received",
+      "qtyReceiveNow": "Receive now",
+      "destBatch": "Dest batch"
+    },
+    "actions": {
+      "approve": "Approve (HQ)",
+      "dispatch": "Dispatch (sender)",
+      "receive": "Record receipt",
+      "cancel": "Cancel transfer"
+    }
+  },
+  "reorder": {
+    "title": "Reorder suggestions",
+    "subtitle": "Medicines with less than 14 days of stock cover based on the last 30 days of sales.",
+    "listHeader": "Suggestions",
+    "pickBranch": "Pick a branch to see suggestions.",
+    "empty": "No reorder suggestions. Every active medicine has at least 14 days of cover (or no sales in 30 days).",
+    "cols": {
+      "currentStock": "On hand",
+      "avgDaily": "Avg/day",
+      "daysCover": "Cover",
+      "suggestedQty": "Suggest",
+      "estCost": "Est cost"
+    }
+  },
+  "pos": {
+    "title": "Point of Sale",
+    "subtitle": "FEFO stock deduction; expired batches are never sold. Two cashiers racing for the last unit? Only one wins.",
+    "searchPlaceholder": "Search by generic, brand or barcode. Then click +",
+    "noMatches": "No matches.",
+    "cart": "Cart",
+    "cartHint": "Change qty with the number box; remove with ×.",
+    "emptyHint": "Cart is empty. Click + next to a medicine.",
+    "total": "Total",
+    "payment": "Payment method",
+    "customerPhone": "Customer phone (optional)",
+    "completeSale": "Complete sale",
+    "emptyCart": "Add at least one item to the cart.",
+    "invalidCart": "Check item quantities and prescription data for controlled drugs.",
+    "remove": "Remove",
+    "prescriptionRequired": "Controlled drug. Prescription required",
+    "rxNumber": "Prescription #",
+    "rxDoctor": "Doctor name",
+    "rxPatient": "Patient name",
+    "backToPos": "Back to POS",
+    "print": "Print",
+    "downloadPdf": "Download PDF",
+    "newSale": "New sale",
+    "copy": "COPY",
+    "cashier": "Cashier",
+    "thankYou": "Thank you for your purchase.",
+    "cols": {
+      "item": "Item",
+      "qty": "Qty",
+      "price": "Price",
+      "total": "Total"
+    }
+  },
+  "receive": {
+    "title": "Receive goods",
+    "itemsHeader": "Items to receive",
+    "rulesLine": "Each line: batch number, expiry date, actual unit cost. Receiving over 110% of ordered is blocked. Expiry must be at least 3 months out (or you may override it).",
+    "noLines": "Add at least one line (qty > 0, batch, expiry).",
+    "notReceivable": "This PO is in status {{status}}. Only APPROVED or PARTIALLY_RECEIVED POs can be received.",
+    "shortExpiryWarn": "Expires in {{days}} days. Under the 3-month rule.",
+    "allowShortExpiryLabel": "I confirm that one or more batches expire in under 3 months.",
+    "submit": "Record receipt",
+    "cols": {
+      "qtyNow": "Qty now",
+      "batch": "Batch #",
+      "expiry": "Expiry",
+      "actualCost": "Actual cost"
+    }
+  },
+  "batches": {
+    "title": "Batches & Expiry",
+    "subtitle": "Live stock by batch, grouped by days-to-expiry. Red: ≤30 days. Orange: 31–60. Yellow: 61–90.",
+    "branchFilter": "Branch:",
+    "allBranches": "All branches",
+    "filteredHeader": "Batches in bucket: {{label}}",
+    "allBatchesHeader": "All batches",
+    "empty": "No batches match this filter.",
+    "units": "units",
+    "cols": {
+      "medicine": "Medicine",
+      "batch": "Batch",
+      "branch": "Branch",
+      "expiry": "Expiry",
+      "qty": "Qty",
+      "unitCost": "Unit cost",
+      "stockValue": "Stock value"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "language": "Language",
+    "view": "View"
+  }
+}

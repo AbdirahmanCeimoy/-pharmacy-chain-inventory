@@ -1,0 +1,495 @@
+{
+  "app": {
+    "name": "PharmaTrack",
+    "tagline": "Alaab-maarayn heer-batch ah iyo iibka laamo badan oo farmashiyada"
+  },
+  "nav": {
+    "dashboard": "Shabakad-sare",
+    "pos": "Meesha Iibka",
+    "medicines": "Daawooyinka",
+    "batches": "Batches",
+    "suppliers": "Alaab-qeybiyayaasha",
+    "purchaseOrders": "Dalab-iibsiyadka",
+    "reorder": "Dalab-cusub",
+    "stockCounts": "Tirin-alaabta",
+    "inventory": "Alaabta",
+    "transfers": "Wareejin",
+    "returns": "Celin",
+    "reports": "Warbixinno",
+    "settings": "Dejinta",
+    "logout": "Ka bax"
+  },
+  "dashboard": {
+    "eyebrow": "Guudmar silsiladda farmashiga",
+    "title": "Shabakad-sare",
+    "subtitle": "Soo dhawoow, {{name}}. Waa kan waxa hadda ka socda silsiladda farmashigaaga maanta.",
+    "subtitleBranch": "Soo dhawoow, {{name}}. Waa kan waxa hadda ka socda {{branch}} maanta.",
+    "kpis": {
+      "todayRevenue": "Dakhliga maanta",
+      "todayRevenueHint": "Iib dhammaystiran oo laga bilaabay saqda dhexe",
+      "unitsSold": "Unugyada maanta la iibiyay",
+      "unitsSoldHint": "Wadarta unugyada daawada iibka oo dhan",
+      "lowStock": "Alaab yar",
+      "lowStockHint": "Ka hooseeya daboolka 14 maalmood",
+      "expiring": "30 maalmood gudahood dhacaya",
+      "expiringHint": "{{value}} oo qiimaha ah",
+      "pendingPos": "Dalab-iibsiyo socdo",
+      "pendingPosHint": "La soo gudbiyay, la ansixiyay ama qayb ahaan la helay"
+    },
+    "trend": {
+      "title": "Dakhliga iyo qiimaha. 7-dii maalmood ee ugu dambeysay",
+      "subtitle": "Faa'iido run ah: qiimaha wuxuu ka imanayaa batch kasta oo la iibiyay.",
+      "revenue": "Dakhli",
+      "cost": "Qiime",
+      "profit": "Faa'iido"
+    },
+    "alerts": {
+      "expiringTitle": "Dhowaan dhacaya",
+      "expiringEmpty": "Batch na dhacayo 30 maalmood gudahood ma jiraan.",
+      "expiringViewAll": "Arag dhammaan batch-yada",
+      "daysLeft": "{{n}} maalmood hadhay",
+      "pendingTitle": "Dalab-iibsiyo wax sugaya",
+      "pendingEmpty": "Dalab-iibsi ku sugaya ma jiro.",
+      "pendingViewAll": "Arag dhammaan dalab-iibsiyada"
+    },
+    "errors": {
+      "loadFailed": "Shabakadda lama rari karin. Bogga dib u cusbooneysii."
+    }
+  },
+  "landing": {
+    "eyebrow": "Silsilad farmashiyo, loogu dhisay Soomaaliya",
+    "ctaPrimary": "Fur barnaamijka",
+    "ctaSecondary": "Faahfaahin dheeraad ah",
+    "bullets": {
+      "fefo": "Kan ugu horreeya dhacaya, kan ugu horreeya iibka",
+      "race": "POS aamin ah oo tartamo ka ilaalisa",
+      "bilingual": "Ingiriis + Soomaali"
+    },
+    "hero": {
+      "headline": "Jooji in lacag kaa luntaa alaab dhacday.",
+      "lead": "Alaab-maarayn heer-batch ah oo ka shaqeyn laamo kasta, ka jaridda qaabka FEFO (kan ugu horreeya dhacaya) meesha iibka, iyo iib aamin ah oo tartamo ka ilaalisa. Sidaa darteed labo iibiye marnaba kama iibsan karaan isku unugga ugu dambeeyay.",
+      "sampleHint": "Rasiidhada waxay sitaan qiimaha batch kasta si faa'iidada laan walba ay u noqoto run, aan la celcelineyn."
+    },
+    "problem": {
+      "title": "Saddex dhibaato oo silsilad kasta oo farmashi la kulanto.",
+      "body": "Khasaare ka imanaya alaab dhacday. Alaab la waayo oo aan la ogeyn. Aan si cad loo arag laanta runta ah ee faa'iidada samaysa. Nidaamkan waxaa loo dhisay in saddexdaas la joojiyo."
+    },
+    "problems": {
+      "problem1": {
+        "title": "Laan ay alaabtu dhacday, laan kale ay alaabtu ka dhammaatay",
+        "body": "La'aanta aragga heer-batch iyo wareejinta laamaha dhexdood, alaabta ayaa laan ku qudhmi kartaa inta laan kale ay ka dhammaanayso."
+      },
+      "problem2": {
+        "title": "Tirin gacan ah, qaladaad aan la ogaan",
+        "body": "Batch la'aan iyo diiwaan-ilaalin la'aan. Sanduuq la waayay wuxuu u ekaan karaa xatooyo saddex isbuuc ka dib. Marka la ogaadana horey u daahay."
+      },
+      "problem3": {
+        "title": "Milkiileyaasha ma arki karaan faa'iidada laan kasta",
+        "body": "Qiimo celceliska ah wuxuu qariyaa laamaha faa'iido samaysta. Go'aamada waxaa lagu qaataa malayn aan sal lahayn."
+      }
+    },
+    "features": {
+      "title": "Astaamaha",
+      "lead": "Xeer walba oo ku jira Mashruuca 09 ee Somalia 10X Challenge, waa la dhisay waana la tijaabiyay.",
+      "items": {
+        "fefo": {
+          "title": "FEFO meesha iibka",
+          "body": "Iib kasta wuxuu ka qaataa batch-ka ugu horrayn dhacaya. Batch-yada dhacay marnaba lama iibin."
+        },
+        "concurrency": {
+          "title": "Iib aamin ah oo tartamo ka ilaalisa",
+          "body": "Labo iibiye u tartamaya unugga ugu dambeeya? Mid keliya ayaa guulaysta. Kan kale wuxuu arkaa fariin cad oo ah 'alaab ma jirto'."
+        },
+        "transfers": {
+          "title": "Wareejin laamaha dhexdood",
+          "body": "La codsaday → La ansixiyay (Xarunta Guud $500 ka badan) → La diray → La helay isla lambarka batch iyo taariikhda dhacitaanka."
+        },
+        "expiry": {
+          "title": "Shabakad-sare dhacitaanka",
+          "body": "Qaybo 30 / 60 / 90 maalmood ah, oo leh midabbo khatarta muujinaya iyo wadarta qiimaha."
+        },
+        "profit": {
+          "title": "Faa'iido run ah laan kasta",
+          "body": "Qiimaha wuxuu ka imanayaa batch kasta oo dhab ahaan la iibiyay. Marnaba lama celceliyo. Celinta alaabtu waxay ka jartaa dakhliga IYO qiimaha."
+        },
+        "controlled": {
+          "title": "Diiwaanka daawada xakameysan",
+          "body": "Farmashiiste kaliya, warqadda daawaynta waa loo baahan yahay, triggers database-ka waxay joojiyaan wax kasta oo wax-ka-bedel ama tir ah."
+        }
+      }
+    },
+    "how": {
+      "title": "Sida iibku u shaqeeyo",
+      "step1": {
+        "title": "Iska-sawir ama raadi",
+        "body": "Barcode ama raadin magac. Ku dar dambiisha. Qiimaha waxaa maamula Xarunta Guud, waana isku mid laan walba."
+      },
+      "step2": {
+        "title": "Dooro bixinta",
+        "body": "Lacag caddaan, EVC Plus, Zaad, eDahab. Dhammaan waxay ka shaqeeyaan adapter la jaangooyay."
+      },
+      "step3": {
+        "title": "FEFO ayaa ka jara",
+        "body": "SELECT…FOR UPDATE batch-yada oo loo soo habeeyay sida ay dhacayaan. Iibiyaha labaad wuxuu arkaa alaabta la cusbooneysiiyay. Tartan ma jiro."
+      },
+      "step4": {
+        "title": "Rasiidhka la bixiyo",
+        "body": "Lambar rasiidh isku xiga (daldaloolo khalad la'aan), la daabici karo, calaamad NUSKHO marka dib loo daabaco."
+      }
+    },
+    "cta": {
+      "title": "Tijaabi barnaamijka tusaalaha",
+      "body": "Database la soo diyaariyay oo leh saddex laamood, afar door, 16 daawo iyo POS oo si buuxda u shaqeynaya, hal gujis ayay kaa fogtahay.",
+      "demoHint": "Soo galka tusaalaha"
+    },
+    "footer": {
+      "build": "Loogu dhisay Somalia 10X Challenge · Mashruuca 09"
+    }
+  },
+  "auth": {
+    "signIn": "Soo Gal",
+    "email": "Iimayl",
+    "password": "Furaha-sirta",
+    "emailPlaceholder": "Geli Iimaylkaaga",
+    "passwordPlaceholder": "Geli Furaha-sirtaada",
+    "submit": "Soo Gal",
+    "invalid": "Iimayl ama furaha-sirta ayaa khaldan.",
+    "forgot": "Furaha-sirta ma illowday?",
+    "enterValidEmail": "Fadlan geli iimayl sax ah.",
+    "enterPassword": "Fadlan geli furaha-sirtaada."
+  },
+  "forgot": {
+    "title": "Dib u Deji Furaha-sirtaada",
+    "subtitle": "Geli iimaylkaaga, waxaana kuu soo diraynaa lambar xaqiijin.",
+    "sendCode": "Dir Lambar Xaqiijinta",
+    "sentNotice": "Haddii iimaylkaas akoonti ku jirto, lambar xaqiijin ayaa loo diray.",
+    "backToLogin": "Ku noqo Soo Galka",
+    "verifyTitle": "Geli Lambarka Xaqiijinta",
+    "verifyLead": "Waxaan u dirnay lambar 6 lambar ah {{email}}. Lambarku wuxuu dhacayaa 5 daqiiqo.",
+    "codeLabel": "Lambar Xaqiijin",
+    "verifyCode": "Xaqiiji Lambarka",
+    "invalidOtp": "Fadlan geli lambarka 6-lambar ee iimaylkaaga.",
+    "resend": "Dib u dir",
+    "resendIn": "Dib u dir {{seconds}}s gudahood",
+    "resent": "Lambar cusub ayaa la diray. Fadlan hubi iimaylkaaga.",
+    "changeEmail": "Beddel iimayl",
+    "resetTitle": "Dooro Furaha-sirtaada Cusub",
+    "resetLead": "Dooro furaha-sirta ugu yaraan 8 xaraf oo isugu jira xuruuf iyo lambaro.",
+    "newPassword": "Furaha-sirta Cusub",
+    "newPasswordPlaceholder": "Geli Furaha-sirtaada Cusub",
+    "confirmPassword": "Xaqiiji Furaha-sirta",
+    "confirmPasswordPlaceholder": "Dib u geli Furaha-sirtaada Cusub",
+    "pwTooShort": "Furaha-sirtu waa inuu ka badan yahay 8 xaraf.",
+    "pwNeedsMix": "Furaha-sirtu waa inuu ka kooban yahay xuruuf iyo lambaro.",
+    "pwMismatch": "Furayaasha-sirta ma isku mid.",
+    "pwRule": "Ugu yaraan 8 xaraf, oo leh ugu yaraan hal xaraf iyo hal lambar.",
+    "updatePassword": "Cusbooneysii Furaha-sirta",
+    "doneTitle": "Furaha-sirta Waa La Cusbooneysiiyay",
+    "doneBody": "Hadda waxaad u geli kartaa akoonkaaga furaha-sirta cusub.",
+    "backToLoginNow": "Ku noqo Soo Galka",
+    "success": "Furaha-sirtaada si guul leh ayaa loo cusbooneysiiyay."
+  },
+  "medicines": {
+    "title": "Daawooyinka",
+    "subtitle": "Catalogue-ka waxaa maamula Xarunta Guud. Qiimaha iibka waa isku mid dhammaan laamaha.",
+    "add": "Kudar daawo",
+    "searchPlaceholder": "Ku raadi magaca guud, brand, ama barcode",
+    "activeOnly": "Kuwa firfircoon oo keliya",
+    "empty": "Ma jiraan daawooyin u waafaqsan raadintaan.",
+    "resultSuffix": "natiijo",
+    "cols": {
+      "generic": "Magac Guud",
+      "brand": "Brand",
+      "form": "Qaab",
+      "strength": "Xoog",
+      "unit": "Halbeeg",
+      "price": "Qiime",
+      "flags": "Astaamo"
+    },
+    "fields": {
+      "generic": "Magaca guud",
+      "brand": "Magaca brand-ka",
+      "form": "Qaabka",
+      "strength": "Xoogga",
+      "unit": "Halbeegga",
+      "price": "Qiimaha iibka (USD)",
+      "category": "Qaybta (ikhtiyaari)",
+      "barcode": "Barcode (ikhtiyaari)",
+      "controlled": "Daawo xakamaysan (waxaa iibin kara oo keliya PHARMACIST oo wata qoraal dhakhtar)"
+    },
+    "flags": {
+      "controlled": "Xakamaysan",
+      "inactive": "Aan firfircooneyn"
+    }
+  },
+  "suppliers": {
+    "title": "Alaab-qeybiyayaasha",
+    "subtitle": "Shirkadaha laga iibsado dalabyada.",
+    "add": "Kudar alaab-qeybiye",
+    "searchPlaceholder": "Ku raadi magaca ama telefoonka",
+    "empty": "Ma jiraan alaab-qeybiyayaal u waafaqsan raadintaan.",
+    "cols": {
+      "name": "Magaca",
+      "phone": "Telefoon",
+      "address": "Cinwaanka",
+      "terms": "Shuruudo"
+    },
+    "fields": {
+      "name": "Magaca",
+      "phone": "Telefoon",
+      "address": "Cinwaanka",
+      "paymentTerms": "Shuruudaha lacag-bixinta"
+    }
+  },
+  "po": {
+    "title": "Dalab-iibsiyadka",
+    "subtitle": "Maamulayaasha laamaha ayaa abuura dalabyada; dalab ka weyn $1000 waxaa oggolaanaya Xarunta Guud.",
+    "new": "Dalab cusub",
+    "empty": "Weli ma jiraan dalab-iibsi.",
+    "filterStatus": "Xaalad:",
+    "filterAll": "Dhammaan",
+    "backToList": "Ku noqo liiska",
+    "createSubtitle": "Laanta {{branch}}. Kudar hal ama in ka badan oo sheyga, dabadeedna keydi draft ama u dir oggolaansho.",
+    "chooseSupplier": "Dooro alaab-qeybiye",
+    "chooseMedicine": "Dooro daawo",
+    "addRow": "Kudar saf",
+    "removeRow": "Ka saar saf",
+    "saveDraft": "Keydi draft",
+    "saveAndSubmit": "Keydi oo u dir",
+    "createdBy": "Abuuray",
+    "approvedBy": "Oggolaaday",
+    "needsHqNotice": "Dalabkan wuxuu ka weyn yahay ${{threshold}}. Wuxuu sugi doonaa oggolaansho Xarunta Guud (Owner) ka dib markuu la diro.",
+    "cols": {
+      "poNumber": "Lambar PO",
+      "branch": "Laan",
+      "supplier": "Alaab-qeybiye",
+      "status": "Xaalad",
+      "total": "Wadarta",
+      "created": "Taariikhda",
+      "actions": "",
+      "medicine": "Daawo",
+      "qty": "Tiro",
+      "qtyReceived": "La helay",
+      "unitCost": "Qiime cutub",
+      "lineTotal": "Wadarta safka"
+    },
+    "fields": {
+      "branch": "Laan",
+      "supplier": "Alaab-qeybiye",
+      "notes": "Qoraalo",
+      "items": "Sheyga"
+    },
+    "chooseBranch": "Dooro laan",
+    "actions": {
+      "submit": "U dir",
+      "approve": "Oggolaanso (HQ)",
+      "cancel": "Jooji dalabka",
+      "receive": "Soo qaad alaabta"
+    }
+  },
+  "stockCounts": {
+    "title": "Tirinta alaabta",
+    "subtitle": "Bilow tirin, geli tirada jirta batch kasta, xaqiiji. Hagaajinta waa la diiwaan geliyay sabab wata, iibkana waa la joojiyay daawooyinka la tirinayo inta muddo.",
+    "start": "Bilow tirin cusub",
+    "empty": "Weli ma jiraan tirimo.",
+    "resume": "Sii wad",
+    "backToList": "Ku noqo tirimaha",
+    "detailTitle": "Tirin #{{id}}",
+    "salesBlockedNotice": "Iibka POS waa loo joojiyay dhammaan daawooyinka ay tirintani ku jirto ilaa aad u dirto ama aad ka noqoto.",
+    "cols": {
+      "when": "La bilaabay",
+      "branch": "Laan",
+      "startedBy": "Bilaabay",
+      "status": "Xaalad",
+      "batches": "Batches",
+      "discrepancies": "Isku-khilaaf",
+      "netValue": "Qiimaha hagaajinta",
+      "system": "Nidaam",
+      "physical": "Dhab",
+      "diff": "Δ",
+      "reason": "Sabab",
+      "note": "Qoraal"
+    },
+    "actions": {
+      "submit": "Dir tirinta",
+      "cancel": "Jooji tirinta"
+    }
+  },
+  "reports": {
+    "title": "Warbixinno",
+    "subtitle": "Faaiidada laan kasta iyo luminta dhicitaanka, oo laga xisaabiyo SQL dhab ah. Marnaba lama celceliyo, lama adkeeyo.",
+    "from": "Laga bilaabo",
+    "to": "Ilaa",
+    "profit": {
+      "title": "Faaiido (maalinle)",
+      "hint": "Dakhli laga jaray kharashka dhabta ah ee batch-ka. Celino waxay ka jaraan labada dhinac.",
+      "total": "Faaiidada (muddada)",
+      "empty": "Ma jiro iib muddada la doortay."
+    },
+    "loss": {
+      "title": "Luminta dhicitaanka (bil kasta)",
+      "hint": "Qiimaha kharashka ee alaabta EXPIRED iyo WRITE_OFF.",
+      "total": "Wadarta luminta (muddada)",
+      "empty": "Ma jirto luminta muddada la doortay.",
+      "top10": "Top 10 daawo oo la lumiyay",
+      "value": "Qiime lumay"
+    }
+  },
+  "returns": {
+    "title": "Celinta",
+    "subtitle": "Gudaha 7 maalmood ka hor iibka, cashier wuxuu diiwaan geliyaa manager-kuna wuu ansixiyaa. Daawooyinka xakamaysan ma la celin karo. Batch-yada dhacay waa la tiri.",
+    "lookupTitle": "Hel rasiidka asalka ah",
+    "receipt": "Lambar rasiid",
+    "lookup": "Raadi",
+    "reason": "Sababta celinta",
+    "reasonPlaceholder": "Xoog qaldan / macmiilka beddelay fikirkiisa / qalab dhaawac ah …",
+    "reasonRequired": "Geli sabab celinta.",
+    "pickAtLeastOne": "Geli tiro ugu yaraan hal saf.",
+    "noPermission": "Kaliya MANAGER ama OWNER ayaa ansixin kara celinta.",
+    "record": "Diiwaan geli celinta",
+    "recent": "Celimahii u dambeeyay",
+    "empty": "Weli ma jiraan celino.",
+    "cols": {
+      "sold": "La iibiyay",
+      "price": "Qiime",
+      "returnQty": "Tirada celinta",
+      "when": "Goorma",
+      "receipt": "Rasiid",
+      "branch": "Laan",
+      "approvedBy": "Oggolaaday",
+      "reason": "Sabab",
+      "refund": "Refund"
+    }
+  },
+  "transfers": {
+    "title": "Wareejinta laamaha",
+    "subtitle": "Laanta codsata ayaa weydiisata; laanta diraysaa ayaa dirta; laanta hesha ayaa xaqiijisa. Ka weyn $500 wuxuu sugayaa oggolaansho HQ.",
+    "new": "Wareejin cusub",
+    "empty": "Weli ma jiraan wareejin.",
+    "create": "Abuur wareejin",
+    "createHint": "Laan waxay codsataa alaab laga keeno laan kale. Wadarta ka hoosaysa $500 si toos ah ayay u ansaxisaa; ka badan waxay u baahan tahay HQ.",
+    "backToList": "Ku noqo wareejinta",
+    "chooseBranch": "Dooro laan",
+    "chooseBothBranches": "Dooro labada laan ee ka iyo ilaa.",
+    "sameBranch": "Ka iyo ilaa waa inay kala duwan yihiin.",
+    "needItems": "Kudar ugu yaraan hal shay tiro > 0.",
+    "needsHqNotice": "Wareejintani wadarteedu waa ka badan tahay ${{threshold}}. Waxay sugaysaa oggolaansho HQ ka hor intaan la dirin.",
+    "requestedBy": "Codsaday",
+    "approvedBy": "Oggolaaday",
+    "shortage": "Dhimis",
+    "shortageNote": "Qoraal dhimista (haddii la helo wax ka yar kii la diray)",
+    "shortagePlaceholder": "tus. Sanduuqyada ayaa la dhaawacay safarka",
+    "fields": {
+      "from": "Laanta laga diro",
+      "to": "Laanta loo diro"
+    },
+    "cols": {
+      "transferNo": "Lambarka",
+      "from": "Ka",
+      "to": "Ilaa",
+      "status": "Xaalad",
+      "value": "Qiime",
+      "qtyRequested": "La codsaday",
+      "qtyDispatched": "La diray",
+      "qtyReceived": "La helay",
+      "qtyReceiveNow": "Hadda hel",
+      "destBatch": "Batch"
+    },
+    "actions": {
+      "approve": "Oggolaanso (HQ)",
+      "dispatch": "Dir (diraha)",
+      "receive": "Diiwaan geli helitaanka",
+      "cancel": "Jooji wareejinta"
+    }
+  },
+  "reorder": {
+    "title": "Soo-jeedinta dalabka cusub",
+    "subtitle": "Daawooyinka alaabtoodu ka yar tahay 14 maalmood iyadoo lagu saleeyay 30 maalmood ee iibka la soo dhaafay.",
+    "listHeader": "Soo-jeedinta",
+    "pickBranch": "Dooro laan si aad u aragto soo-jeedinta.",
+    "empty": "Ma jiraan soo-jeedin. Daawo kasta oo firfircoon waxay leedahay ugu yaraan 14 maalmood (ama ma jirin iib 30 maalmood gudahood).",
+    "cols": {
+      "currentStock": "La haysto",
+      "avgDaily": "Celceli/maalin",
+      "daysCover": "Sicir",
+      "suggestedQty": "La soo jeedinayo",
+      "estCost": "Qiimo lagu qiyaasay"
+    }
+  },
+  "pos": {
+    "title": "Meesha Iibka",
+    "subtitle": "Ka-goynta FEFO; batches-ka dhacay marnaba lama iibin. Laba cashier oo isla mar u sheekeeya unit-ka ugu dambeeya? Mid keliya ayaa guulaysan doona.",
+    "searchPlaceholder": "Ku raadi magaca guud, brand, ama barcode. Kadib dhufo +",
+    "noMatches": "Wax lagu waafajin karo ma jiro.",
+    "cart": "Dambiisha",
+    "cartHint": "Beddel tirada sanduuqa lambarka; ka saar ×.",
+    "emptyHint": "Dambiisha waa madhan. Dhufo + ee daawada agteeda.",
+    "total": "Wadarta",
+    "payment": "Habka lacag-bixinta",
+    "customerPhone": "Telefoonka macmiilka (ikhtiyaari)",
+    "completeSale": "Dhammee iibka",
+    "emptyCart": "Ugu yaraan hal shay kudar dambiisha.",
+    "invalidCart": "Hubi tirada sheyga iyo xogta qoraal-dhakhtarka ee daroogooyinka xakamaysan.",
+    "remove": "Ka saar",
+    "prescriptionRequired": "Daawo xakamaysan. Qoraal dhakhtar waa loo baahan yahay",
+    "rxNumber": "Lambar qoraal",
+    "rxDoctor": "Magaca dhakhtarka",
+    "rxPatient": "Magaca bukaanka",
+    "backToPos": "Ku noqo POS-ka",
+    "print": "Daabac",
+    "downloadPdf": "Soo dejiso PDF",
+    "newSale": "Iib cusub",
+    "copy": "NUSQAD",
+    "cashier": "Lacag-qaataha",
+    "thankYou": "Waad ku mahadsantahay iibsigaga.",
+    "cols": {
+      "item": "Shay",
+      "qty": "Tiro",
+      "price": "Qiime",
+      "total": "Wadarta"
+    }
+  },
+  "receive": {
+    "title": "Soo qaadka alaabta",
+    "itemsHeader": "Sheyga la soo qaadayo",
+    "rulesLine": "Saf kasta: lambar batch, taariikhda dhicitaanka, qiimaha dhabta ah. Soo-qaadka ka badan 110% ee la dalbay waa la joojiyay. Dhicitaanka waa inuu u yahay ugu yaraan 3 bilood (ama waa la dulmari karaa).",
+    "noLines": "Kudar ugu yaraan hal saf (tiro > 0, batch, dhicitaan).",
+    "notReceivable": "Dalabkan wuxuu ku jiraa xaalad {{status}}. Kaliya APPROVED ama PARTIALLY_RECEIVED ayaa la soo qaadi karaa.",
+    "shortExpiryWarn": "Wuxuu dhacayaa {{days}} maalin. Hoos ka hoosaysa xeerka 3-bilood.",
+    "allowShortExpiryLabel": "Waan oggolahay in hal ama in ka badan batch ay ku dhacayaan wax ka yar 3 bilood.",
+    "submit": "Diiwaan geli soo-qaadka",
+    "cols": {
+      "qtyNow": "Tirada hadda",
+      "batch": "Batch #",
+      "expiry": "Dhicitaanka",
+      "actualCost": "Qiime dhab ah"
+    }
+  },
+  "batches": {
+    "title": "Batches iyo Dhicitaanka",
+    "subtitle": "Alaabta nool ee batch, oo lagu kala saaray maalmaha u haray dhicitaanka. Guduud: ≤30 maalin. Orange: 31–60. Jaalle: 61–90.",
+    "branchFilter": "Laan:",
+    "allBranches": "Dhammaan laamaha",
+    "filteredHeader": "Batches ee qaybta: {{label}}",
+    "allBatchesHeader": "Dhammaan batches",
+    "empty": "Ma jiraan batches u waafaqsan filter-kan.",
+    "units": "cutub",
+    "cols": {
+      "medicine": "Daawo",
+      "batch": "Batch",
+      "branch": "Laan",
+      "expiry": "Dhicitaan",
+      "qty": "Tiro",
+      "unitCost": "Qiime cutub",
+      "stockValue": "Qiimaha alaabta"
+    }
+  },
+  "common": {
+    "loading": "Waa la soo rarayaa...",
+    "save": "Keydi",
+    "cancel": "Jooji",
+    "search": "Raadi",
+    "language": "Luuqadda",
+    "view": "Eeg"
+  }
+}
