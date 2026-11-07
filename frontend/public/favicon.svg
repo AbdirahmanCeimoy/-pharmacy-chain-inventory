@@ -1,0 +1,17 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="10" fill="#3952A4"/>
+  <!-- P -->
+  <path
+    d="M12 11 h12 a7 7 0 0 1 0 14 h-8 M16 11 v26"
+    stroke="#FFFFFF" stroke-width="4" fill="none"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+  <!-- T interlocked with the P's bowl -->
+  <path
+    d="M23 21 h14 M30 21 v16"
+    stroke="#FFFFFF" stroke-width="4" fill="none"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+  <!-- pill dot -->
+  <circle cx="39" cy="12" r="2.2" fill="#FFFFFF" opacity="0.85"/>
+</svg>
