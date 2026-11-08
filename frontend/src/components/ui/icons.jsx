@@ -188,3 +188,43 @@ export function EyeOffIcon(props) {
     </svg>
   );
 }
+export function ClockIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+export function ShieldIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6l8-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  );
+}
+export function AlertIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3l10 18H2L12 3z" />
+      <path d="M12 10v5M12 18h.01" />
+    </svg>
+  );
+}
+export function TrendDownIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3 7l6 6 4-4 8 8" />
+      <path d="M21 17v-4h-4" />
+    </svg>
+  );
+}
+export function AbacusIcon(props) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 9h18M3 14h18M8 4v5M12 9v5M16 14v6" />
+    </svg>
+  );
+}
