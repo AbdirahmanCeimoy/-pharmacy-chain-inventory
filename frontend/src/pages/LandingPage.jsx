@@ -2,6 +2,17 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { setLanguage } from '../i18n';
 import { Logo } from '../components/branding/Logo.jsx';
+import {
+  BoxIcon,
+  TrendDownIcon,
+  AbacusIcon,
+  ClockIcon,
+  ShieldIcon,
+  RefreshIcon,
+  CalendarIcon,
+  ChartIcon,
+  PillIcon,
+} from '../components/ui/icons.jsx';
 
 export default function LandingPage() {
   const { t, i18n } = useTranslation();
@@ -42,9 +53,7 @@ export default function LandingPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">
-              {t('landing.eyebrow')}
-            </p>
+            <p className="text-sm font-medium text-brand-primary">{t('landing.eyebrow')}</p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-ink-primary sm:text-5xl">
               {t('landing.hero.headline')}
             </h1>
@@ -53,7 +62,7 @@ export default function LandingPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/login" className="btn-primary">
-                {t('landing.ctaPrimary')} →
+                {t('landing.ctaPrimary')}
               </Link>
               <a
                 href="#features"
@@ -67,9 +76,18 @@ export default function LandingPage() {
               </a>
             </div>
             <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-ink-secondary">
-              <li>✓ {t('landing.bullets.fefo')}</li>
-              <li>✓ {t('landing.bullets.race')}</li>
-              <li>✓ {t('landing.bullets.bilingual')}</li>
+              <li className="inline-flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-status-success" aria-hidden />
+                {t('landing.bullets.fefo')}
+              </li>
+              <li className="inline-flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-status-success" aria-hidden />
+                {t('landing.bullets.race')}
+              </li>
+              <li className="inline-flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-status-success" aria-hidden />
+                {t('landing.bullets.bilingual')}
+              </li>
             </ul>
           </div>
 
@@ -103,8 +121,8 @@ export default function LandingPage() {
                 {t('landing.hero.sampleHint')}
               </p>
             </div>
-            <div className="absolute -right-3 -top-3 rotate-6 rounded-md bg-brand-primary px-2.5 py-1 text-xs font-semibold text-white shadow">
-              FEFO
+            <div className="absolute -right-2 -top-2 rounded-md border border-line bg-surface-panel px-2.5 py-1 text-[11px] font-medium text-ink-secondary shadow-sm">
+              FEFO allocation
             </div>
           </div>
         </div>
@@ -118,10 +136,14 @@ export default function LandingPage() {
           </h2>
           <p className="mt-3 max-w-3xl text-ink-secondary">{t('landing.problem.body')}</p>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {['problem1', 'problem2', 'problem3'].map((k) => (
+            {[
+              { k: 'problem1', Icon: BoxIcon },
+              { k: 'problem2', Icon: TrendDownIcon },
+              { k: 'problem3', Icon: AbacusIcon },
+            ].map(({ k, Icon }) => (
               <div key={k} className="rounded-panel border border-line p-5">
-                <div className="text-3xl">
-                  {k === 'problem1' ? '📦' : k === 'problem2' ? '📉' : '🧮'}
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-muted text-ink-secondary">
+                  <Icon width={20} height={20} />
                 </div>
                 <h3 className="mt-3 font-semibold text-ink-primary">
                   {t(`landing.problems.${k}.title`)}
@@ -141,15 +163,17 @@ export default function LandingPage() {
         <p className="mt-2 max-w-2xl text-ink-secondary">{t('landing.features.lead')}</p>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[
-            ['fefo', '⏱️'],
-            ['concurrency', '🔒'],
-            ['transfers', '🔄'],
-            ['expiry', '📅'],
-            ['profit', '📊'],
-            ['controlled', '💊'],
-          ].map(([k, emoji]) => (
+            { k: 'fefo', Icon: ClockIcon },
+            { k: 'concurrency', Icon: ShieldIcon },
+            { k: 'transfers', Icon: RefreshIcon },
+            { k: 'expiry', Icon: CalendarIcon },
+            { k: 'profit', Icon: ChartIcon },
+            { k: 'controlled', Icon: PillIcon },
+          ].map(({ k, Icon }) => (
             <div key={k} className="rounded-panel border border-line bg-surface-panel p-5">
-              <div className="text-2xl">{emoji}</div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-muted text-ink-secondary">
+                <Icon width={20} height={20} />
+              </div>
               <h3 className="mt-3 font-semibold text-ink-primary">
                 {t(`landing.features.items.${k}.title`)}
               </h3>
@@ -192,7 +216,7 @@ export default function LandingPage() {
             to="/login"
             className="mt-6 inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-brand-primary shadow hover:bg-surface-muted"
           >
-            {t('landing.ctaPrimary')} →
+            {t('landing.ctaPrimary')}
           </Link>
           <p className="mt-4 text-xs text-white/80">
             {t('landing.cta.demoHint')}: <span className="font-mono">owner@pharmacy.so</span> /{' '}
