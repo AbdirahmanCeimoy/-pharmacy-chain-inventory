@@ -128,7 +128,7 @@ export default function ForgotPasswordPage() {
       <header className="border-b border-line bg-surface-panel">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
           <Link to="/welcome" className="flex items-center gap-2">
-            <Logo size={32} withWordmark />
+            <Logo size={30} tone="light" />
           </Link>
           <nav className="flex items-center gap-1" aria-label={t('common.language')}>
             {['en', 'so'].map((l) => (
@@ -154,7 +154,7 @@ export default function ForgotPasswordPage() {
           {step === 'request' && (
             <form onSubmit={onRequest} noValidate>
               <div className="flex flex-col items-center gap-2 text-center">
-                <Logo size={44} />
+                <Logo size={40} tone="light" />
                 <h1 className="mt-2 text-xl font-semibold text-ink-primary">{t('forgot.title')}</h1>
                 <p className="text-sm text-ink-secondary">{t('forgot.subtitle')}</p>
               </div>
@@ -193,7 +193,7 @@ export default function ForgotPasswordPage() {
           {step === 'verify' && (
             <form onSubmit={onVerify} noValidate>
               <div className="flex flex-col items-center gap-2 text-center">
-                <Logo size={44} />
+                <Logo size={40} tone="light" />
                 <h1 className="mt-2 text-xl font-semibold text-ink-primary">
                   {t('forgot.verifyTitle')}
                 </h1>
@@ -256,7 +256,7 @@ export default function ForgotPasswordPage() {
           {step === 'reset' && (
             <form onSubmit={onReset} noValidate>
               <div className="flex flex-col items-center gap-2 text-center">
-                <Logo size={44} />
+                <Logo size={40} tone="light" />
                 <h1 className="mt-2 text-xl font-semibold text-ink-primary">
                   {t('forgot.resetTitle')}
                 </h1>
