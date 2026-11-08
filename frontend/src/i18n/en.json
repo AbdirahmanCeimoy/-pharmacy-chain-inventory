@@ -1,7 +1,7 @@
 {
   "app": {
-    "name": "PharmaTrack",
-    "tagline": "Batch-level inventory and point-of-sale for a multi-branch pharmacy chain"
+    "name": "Medicap",
+    "tagline": "Smart Pharmacy Management"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -25,16 +25,22 @@
     "subtitle": "Welcome, {{name}}. Here is what is happening across your pharmacy chain today.",
     "subtitleBranch": "Welcome, {{name}}. Here is what is happening at {{branch}} today.",
     "kpis": {
-      "todayRevenue": "Today's revenue",
+      "todayRevenue": "Revenue today",
       "todayRevenueHint": "Completed sales since midnight",
-      "unitsSold": "Units sold today",
+      "unitsSold": "Units sold",
       "unitsSoldHint": "Total medicine units across all sales",
-      "lowStock": "Low stock items",
+      "lowStock": "Low Stock",
       "lowStockHint": "Below 14-day cover",
-      "expiring": "Expiring in 30 days",
+      "expiring": "Expiring soon",
       "expiringHint": "{{value}} at cost",
+      "totalMedicines": "Total Medicines",
+      "inStock": "In Stock",
+      "expired": "Expired",
+      "totalStock": "Total Stock",
       "pendingPos": "Purchase orders in progress",
-      "pendingPosHint": "Submitted, approved or partially received"
+      "pendingPosHint": "Submitted, approved or partially received",
+      "totalSales": "Total sales (7d)",
+      "activeBranches": "Active branches"
     },
     "trend": {
       "title": "Revenue vs cost — last 7 days",
@@ -50,10 +56,16 @@
       "daysLeft": "{{n}}d left",
       "pendingTitle": "Purchase orders awaiting action",
       "pendingEmpty": "No purchase orders waiting on you.",
-      "pendingViewAll": "View all purchase orders"
+      "pendingViewAll": "View all purchase orders",
+      "recentTitle": "Recent activities"
     },
     "errors": {
       "loadFailed": "Could not load the dashboard. Try reloading the page."
+    },
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
     }
   },
   "landing": {
@@ -489,6 +501,7 @@
     "save": "Save",
     "cancel": "Cancel",
     "search": "Search",
+    "searchPlaceholder": "Search medicines, batches, receipts…",
     "language": "Language",
     "view": "View"
   }

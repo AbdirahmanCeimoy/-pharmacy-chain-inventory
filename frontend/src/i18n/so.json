@@ -1,7 +1,7 @@
 {
   "app": {
-    "name": "PharmaTrack",
-    "tagline": "Alaab-maarayn heer-batch ah iyo iibka laamo badan oo farmashiyada"
+    "name": "Medicap",
+    "tagline": "Maaraynta Caqliga leh ee Farmashiyaha"
   },
   "nav": {
     "dashboard": "Shabakad-sare",
@@ -27,14 +27,16 @@
     "kpis": {
       "todayRevenue": "Dakhliga maanta",
       "todayRevenueHint": "Iib dhammaystiran oo laga bilaabay saqda dhexe",
-      "unitsSold": "Unugyada maanta la iibiyay",
+      "unitsSold": "Unugyo",
       "unitsSoldHint": "Wadarta unugyada daawada iibka oo dhan",
-      "lowStock": "Alaab yar",
+      "lowStock": "Kayd yar",
       "lowStockHint": "Ka hooseeya daboolka 14 maalmood",
-      "expiring": "30 maalmood gudahood dhacaya",
+      "expiring": "Dhowaan dhacaya",
       "expiringHint": "{{value}} oo qiimaha ah",
       "pendingPos": "Dalab-iibsiyo socdo",
-      "pendingPosHint": "La soo gudbiyay, la ansixiyay ama qayb ahaan la helay"
+      "pendingPosHint": "La soo gudbiyay, la ansixiyay ama qayb ahaan la helay",
+      "totalSales": "Iibka (7 maalmood)",
+      "activeBranches": "Laamaha firfircoon"
     },
     "trend": {
       "title": "Dakhliga iyo qiimaha. 7-dii maalmood ee ugu dambeysay",
@@ -50,10 +52,16 @@
       "daysLeft": "{{n}} maalmood hadhay",
       "pendingTitle": "Dalab-iibsiyo wax sugaya",
       "pendingEmpty": "Dalab-iibsi ku sugaya ma jiro.",
-      "pendingViewAll": "Arag dhammaan dalab-iibsiyada"
+      "pendingViewAll": "Arag dhammaan dalab-iibsiyada",
+      "recentTitle": "Shaqooyinka dhowaan"
     },
     "errors": {
       "loadFailed": "Shabakadda lama rari karin. Bogga dib u cusbooneysii."
+    },
+    "greeting": {
+      "morning": "Subax wanaagsan",
+      "afternoon": "Galab wanaagsan",
+      "evening": "Habeen wanaagsan"
     }
   },
   "landing": {
@@ -489,6 +497,7 @@
     "save": "Keydi",
     "cancel": "Jooji",
     "search": "Raadi",
+    "searchPlaceholder": "Raadi dawooyin, batch-yo, rasiidyo…",
     "language": "Luuqadda",
     "view": "Eeg"
   }
