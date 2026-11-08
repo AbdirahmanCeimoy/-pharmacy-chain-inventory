@@ -24,57 +24,51 @@ function shortDate(d) {
 }
 
 function KpiTile({ label, value, hint, tone = 'default', Icon }) {
-  // Each tone gets its own gradient background + colour-matched value text +
-  // soft-tinted icon badge. This gives the home screen real visual weight
-  // without resorting to heavy chrome.
+  // unslop pass: flat tinted surface (no hue gradients), one accent bar on the
+  // left as the tone signifier, weights capped at 600, no hover rise animation.
   const toneConfig = {
     default: {
-      bg: 'bg-gradient-to-br from-white via-surface-muted/40 to-white',
+      border: 'border-line',
+      value: 'text-ink-primary',
+      iconBg: 'bg-surface-muted text-ink-secondary',
+      bar: 'bg-line',
+    },
+    warning: {
+      border: 'border-line',
+      value: 'text-ink-primary',
+      iconBg: 'bg-status-warning/10 text-status-warning',
+      bar: 'bg-status-warning',
+    },
+    danger: {
+      border: 'border-line',
+      value: 'text-ink-primary',
+      iconBg: 'bg-status-danger/10 text-status-danger',
+      bar: 'bg-status-danger',
+    },
+    success: {
+      border: 'border-line',
+      value: 'text-ink-primary',
+      iconBg: 'bg-status-success/10 text-status-success',
+      bar: 'bg-status-success',
+    },
+    info: {
       border: 'border-line',
       value: 'text-ink-primary',
       iconBg: 'bg-brand-chart/10 text-brand-chart',
       bar: 'bg-brand-chart',
     },
-    warning: {
-      bg: 'bg-gradient-to-br from-status-warning/10 via-white to-white',
-      border: 'border-status-warning/30',
-      value: 'text-status-warning',
-      iconBg: 'bg-status-warning/15 text-status-warning',
-      bar: 'bg-status-warning',
-    },
-    danger: {
-      bg: 'bg-gradient-to-br from-status-danger/10 via-white to-white',
-      border: 'border-status-danger/30',
-      value: 'text-status-danger',
-      iconBg: 'bg-status-danger/15 text-status-danger',
-      bar: 'bg-status-danger',
-    },
-    success: {
-      bg: 'bg-gradient-to-br from-status-success/10 via-white to-white',
-      border: 'border-status-success/30',
-      value: 'text-status-success',
-      iconBg: 'bg-status-success/15 text-status-success',
-      bar: 'bg-status-success',
-    },
-    info: {
-      bg: 'bg-gradient-to-br from-brand-chart/10 via-white to-white',
-      border: 'border-brand-chart/30',
-      value: 'text-brand-chart',
-      iconBg: 'bg-brand-chart/15 text-brand-chart',
-      bar: 'bg-brand-chart',
-    },
   }[tone];
   return (
     <div
-      className={`relative overflow-hidden rounded-xl border p-4 shadow-sm transition hover:shadow-md ${toneConfig.bg} ${toneConfig.border}`}
+      className={`relative overflow-hidden rounded-xl border bg-surface-panel p-4 ${toneConfig.border}`}
     >
       <span className={`absolute inset-y-0 left-0 w-1 ${toneConfig.bar}`} aria-hidden />
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <div className="text-[10px] font-semibold uppercase tracking-wider text-ink-muted">
-            {label}
+          <div className="text-xs font-medium text-ink-secondary">{label}</div>
+          <div className={`mt-1 text-2xl font-semibold tabular-nums ${toneConfig.value}`}>
+            {value}
           </div>
-          <div className={`mt-1 text-2xl font-bold tabular-nums ${toneConfig.value}`}>{value}</div>
           {hint && <div className="mt-1 text-[11px] text-ink-secondary">{hint}</div>}
         </div>
         {Icon && (
@@ -126,7 +120,7 @@ export default function DashboardPage() {
       {/* Breadcrumbs */}
       <nav className="text-xs text-ink-muted" aria-label="Breadcrumb">
         <ol className="flex items-center gap-1">
-          <li>PharmaTrack</li>
+          <li>{t('app.name')}</li>
           <li aria-hidden>/</li>
           <li className="text-ink-primary">{t('dashboard.title')}</li>
         </ol>
@@ -134,10 +128,8 @@ export default function DashboardPage() {
 
       {/* Page header */}
       <header>
-        <div className="text-xs font-semibold uppercase tracking-widest text-brand-chart">
-          {t('dashboard.eyebrow')}
-        </div>
-        <h1 className="mt-1 text-2xl font-bold text-ink-primary sm:text-3xl">
+        <div className="text-xs font-medium text-brand-chart">{t('dashboard.eyebrow')}</div>
+        <h1 className="mt-1 text-2xl font-semibold text-ink-primary sm:text-3xl">
           {t('dashboard.title')}
         </h1>
         <p className="mt-2 max-w-3xl text-sm text-ink-secondary">{subtitle}</p>
