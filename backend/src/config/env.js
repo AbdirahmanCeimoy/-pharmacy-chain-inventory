@@ -14,7 +14,10 @@ const schema = z.object({
   DB_NAME: z.string().min(1),
 
   JWT_SECRET: z.string().min(32, 'JWT_SECRET must be at least 32 characters'),
-  JWT_EXPIRES_IN: z.string().default('12h'),
+  // 2h session default: pharmacy terminals are often shared or left unlocked,
+  // so the attack window for a stolen device needs to stay short. Operators
+  // can lengthen via .env when they ship a refresh-token flow.
+  JWT_EXPIRES_IN: z.string().default('2h'),
   BCRYPT_ROUNDS: z.coerce.number().int().min(4).max(14).default(10),
 
   RATE_LIMIT_WINDOW_MS: z.coerce.number().int().positive().default(60000),
