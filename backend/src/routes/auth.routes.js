@@ -14,7 +14,28 @@ const loginSchema = z.object({
   password: z.string().min(1),
 });
 
-router.post('/login', async (req, res, next) => {
+// Per-email login limiter. The global limiter protects the whole API, but a
+// shared-NAT attacker could still brute-force a known email within that quota.
+// This limiter keys on the submitted email (lower-cased) so each account gets
+// its own 10-attempt / 15-minute window. Bypassed under NODE_ENV=test so the
+// integration suite can run its login bursts.
+const loginLimiter =
+  env.NODE_ENV === 'test'
+    ? (_req, _res, next) => next()
+    : rateLimit({
+        windowMs: 15 * 60 * 1000,
+        limit: 10,
+        standardHeaders: 'draft-7',
+        legacyHeaders: false,
+        keyGenerator: (req) =>
+          `login:${(req.body && req.body.email && String(req.body.email).trim().toLowerCase()) || req.ip}`,
+        message: {
+          error: 'TOO_MANY_LOGIN_ATTEMPTS',
+          message: 'Too many sign-in attempts. Try again in 15 minutes.',
+        },
+      });
+
+router.post('/login', loginLimiter, async (req, res, next) => {
   const parsed = loginSchema.safeParse(req.body);
   if (!parsed.success) {
     return next(new ValidationError('Invalid login payload', parsed.error.flatten().fieldErrors));
