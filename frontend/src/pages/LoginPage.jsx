@@ -5,6 +5,25 @@ import { useAuth } from '../auth/AuthContext.jsx';
 import { setLanguage } from '../i18n';
 import { Logo } from '../components/branding/Logo.jsx';
 import PasswordInput from '../components/ui/PasswordInput.jsx';
+import { ShieldIcon } from '../components/ui/icons.jsx';
+
+function MailIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 7l9 6 9-6" />
+    </svg>
+  );
+}
+
+function LockIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </svg>
+  );
+}
 
 export default function LoginPage() {
   const { t, i18n } = useTranslation();
@@ -14,6 +33,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [busy, setBusy] = useState(false);
+  const [remember, setRemember] = useState(true);
 
   if (status === 'authenticated') return <Navigate to="/" replace />;
 
@@ -21,9 +41,6 @@ export default function LoginPage() {
     e.preventDefault();
     setError(null);
     const cleanEmail = email.trim().toLowerCase();
-    // Trim leading/trailing whitespace on the password too — copy-paste from
-    // email clients and password managers often slips a trailing space in,
-    // and bcrypt's compare treats that as a wrong password.
     const cleanPassword = password.replace(/^\s+|\s+$/g, '');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
       setError(t('auth.enterValidEmail'));
@@ -44,15 +61,25 @@ export default function LoginPage() {
     }
   }
 
-  const hasEdgeWhitespace =
-    email !== email.trim() || (password && password !== password.replace(/^\s+|\s+$/g, ''));
-
   return (
-    <div className="flex min-h-full flex-col bg-surface-page">
-      <header className="border-b border-line bg-surface-panel">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <Link to="/welcome" className="flex items-center gap-2">
-            <Logo size={32} withWordmark />
+    <div className="relative min-h-full overflow-hidden bg-surface-page">
+      {/* Decorative colored background washes */}
+      <div
+        className="absolute -right-32 -top-32 h-96 w-96 rounded-full opacity-50 blur-3xl"
+        style={{ background: 'radial-gradient(circle, #DCFCE7 0%, transparent 60%)' }}
+        aria-hidden
+      />
+      <div
+        className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full opacity-50 blur-3xl"
+        style={{ background: 'radial-gradient(circle, #DBEAFE 0%, transparent 60%)' }}
+        aria-hidden
+      />
+
+      {/* Header strip for language switcher */}
+      <header className="relative">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+          <Link to="/welcome" className="flex items-center">
+            <Logo size={32} tone="light" />
           </Link>
           <nav className="flex items-center gap-1" aria-label={t('common.language')}>
             {['en', 'so'].map((l) => (
@@ -62,7 +89,7 @@ export default function LoginPage() {
                 onClick={() => setLanguage(l)}
                 className={
                   i18n.language === l
-                    ? 'rounded-md bg-surface-muted px-3 py-1 text-xs font-medium text-ink-primary'
+                    ? 'rounded-md bg-brand-primary/10 px-3 py-1 text-xs font-semibold text-brand-primary'
                     : 'rounded-md px-3 py-1 text-xs text-ink-secondary hover:bg-surface-muted'
                 }
               >
@@ -73,64 +100,139 @@ export default function LoginPage() {
         </div>
       </header>
 
-      <main className="flex-1 grid place-items-center p-4">
-        <form onSubmit={onSubmit} className="panel w-full max-w-sm p-6" noValidate>
-          <div className="flex flex-col items-center gap-2 text-center">
-            <Logo size={48} />
-            <h1 className="mt-2 text-xl font-semibold text-ink-primary">{t('auth.signIn')}</h1>
-            <p className="text-sm text-ink-secondary">{t('app.tagline')}</p>
-          </div>
+      {/* Sign-in card */}
+      <main className="relative flex min-h-[calc(100vh-72px)] items-center justify-center px-4 pb-12">
+        <div className="relative w-full max-w-md">
+          {/* Decorative mint corner shape (top right of card) */}
+          <svg
+            className="pointer-events-none absolute -right-2 -top-2 h-32 w-32 opacity-40"
+            viewBox="0 0 128 128"
+            fill="none"
+            aria-hidden
+          >
+            <path
+              d="M128 0 C72 0, 0 44, 0 128 L128 128 Z"
+              fill="url(#mintGrad)"
+            />
+            <defs>
+              <linearGradient id="mintGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#5EEAD4" />
+                <stop offset="1" stopColor="#D1FAE5" />
+              </linearGradient>
+            </defs>
+          </svg>
+          {/* Decorative corner (bottom left) */}
+          <svg
+            className="pointer-events-none absolute -bottom-2 -left-2 h-32 w-32 opacity-40"
+            viewBox="0 0 128 128"
+            fill="none"
+            aria-hidden
+          >
+            <path d="M0 128 C 56 128, 128 84, 128 0 L0 0 Z" fill="url(#mintGrad2)" />
+            <defs>
+              <linearGradient id="mintGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#5EEAD4" />
+                <stop offset="1" stopColor="#D1FAE5" />
+              </linearGradient>
+            </defs>
+          </svg>
 
-          {error && (
-            <div
-              role="alert"
-              className="mt-4 rounded-md border border-status-danger/40 bg-status-danger/10 p-3 text-sm text-status-danger"
-            >
-              {error}
-              {hasEdgeWhitespace && (
-                <div className="mt-1 text-xs opacity-90">
-                  Tip: your input has leading or trailing spaces. We will trim them for you on
-                  submit.
-                </div>
-              )}
+          <form
+            onSubmit={onSubmit}
+            className="relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-xl"
+            noValidate
+          >
+            {/* Brand lockup */}
+            <div className="flex flex-col items-center text-center">
+              <Logo size={42} tone="light" />
+              <p className="mt-2 text-[12px] font-medium text-ink-secondary">
+                Smart Pharmacy Management
+              </p>
             </div>
-          )}
 
-          <label className="mt-5 block text-sm font-medium text-ink-primary">
-            {t('auth.email')}
-            <input
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="input mt-1"
-              placeholder={t('auth.emailPlaceholder')}
-            />
-          </label>
+            <div className="mt-8 text-center">
+              <h1 className="text-xl font-semibold text-ink-primary">
+                {t('auth.signIn') || 'Sign In to Your Account'}
+              </h1>
+              <p className="mt-1 text-sm text-ink-secondary">
+                Access your dashboard and manage your pharmacy.
+              </p>
+            </div>
 
-          <label className="mt-3 block text-sm font-medium text-ink-primary">
-            {t('auth.password')}
-            <PasswordInput
-              className="mt-1"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              autoComplete="current-password"
-              required
-              placeholder={t('auth.passwordPlaceholder')}
-            />
-          </label>
+            {error && (
+              <div
+                role="alert"
+                className="mt-5 rounded-lg border border-status-danger/40 bg-status-danger/10 p-3 text-sm text-status-danger"
+              >
+                {error}
+              </div>
+            )}
 
-          <div className="mt-2 text-right">
-            <Link to="/forgot-password" className="text-xs text-brand-primary hover:underline">
-              {t('auth.forgot')}
-            </Link>
-          </div>
+            {/* Email */}
+            <label className="mt-6 block">
+              <span className="sr-only">{t('auth.email')}</span>
+              <div className="flex items-center gap-2 rounded-xl border border-line bg-white px-3.5 py-3 transition focus-within:border-brand-primary focus-within:ring-4 focus-within:ring-brand-primary/10">
+                <MailIcon className="shrink-0 text-ink-muted" />
+                <input
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter Your Email Address"
+                  className="w-full border-0 bg-transparent text-sm text-ink-primary placeholder:text-ink-muted focus:outline-none"
+                />
+              </div>
+            </label>
 
-          <button type="submit" disabled={busy} className="btn-primary mt-4 w-full">
-            {busy ? t('common.loading') : t('auth.submit')}
-          </button>
-        </form>
+            {/* Password */}
+            <label className="mt-3 block">
+              <span className="sr-only">{t('auth.password')}</span>
+              <div className="flex items-center gap-2 rounded-xl border border-line bg-white px-3.5 py-2 transition focus-within:border-brand-primary focus-within:ring-4 focus-within:ring-brand-primary/10">
+                <LockIcon className="shrink-0 text-ink-muted" />
+                <PasswordInput
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="current-password"
+                  required
+                  placeholder="Enter Your Password"
+                  className="w-full border-0 bg-transparent !px-0 !py-1.5 text-sm shadow-none focus:ring-0"
+                />
+              </div>
+            </label>
+
+            {/* Remember + forgot */}
+            <div className="mt-4 flex items-center justify-between text-xs">
+              <label className="inline-flex cursor-pointer items-center gap-2 text-ink-secondary">
+                <input
+                  type="checkbox"
+                  checked={remember}
+                  onChange={(e) => setRemember(e.target.checked)}
+                  className="h-4 w-4 rounded border-line text-brand-primary focus:ring-brand-primary"
+                />
+                <span>Remember Me</span>
+              </label>
+              <Link to="/forgot-password" className="font-semibold text-brand-primary hover:underline">
+                {t('auth.forgot') || 'Forgot Password?'}
+              </Link>
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={busy}
+              className="mt-5 w-full rounded-xl bg-brand-primary px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-primary-dark disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {busy ? t('common.loading') : t('auth.submit') || 'Sign In'}
+            </button>
+
+            {/* Trust strip */}
+            <div className="mt-6 flex items-center justify-center gap-2 text-[11px] font-medium text-status-success">
+              <ShieldIcon width={14} height={14} />
+              Secure and Trusted Pharmacy System
+            </div>
+          </form>
+        </div>
       </main>
     </div>
   );
