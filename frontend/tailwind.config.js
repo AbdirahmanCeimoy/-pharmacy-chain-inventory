@@ -23,16 +23,26 @@ export default {
       // -----------------------------------------------------------------
       colors: {
         brand: {
+          // Medicap navy — sidebar, primary CTA.
           primary: '#3952A4',
           'primary-dark': '#2D4283',
           'primary-light': '#5B70B6',
+          // Deep nav: the sidebar background in the reference is deeper than the
+          // CTA blue so the two can sit beside each other without clashing.
+          nav: '#1E3A6E',
+          'nav-raise': '#294A80',
+          'nav-line': '#2F4E85',
           chart: '#3B82F6',
           secondary: '#0F172A',
+          // Mint heartbeat accent — used only in the logo and for the active
+          // sidebar signal.
+          mint: '#5EEAD4',
         },
         surface: {
-          page: '#FFFFFF',
+          page: '#F7F8FB',
           panel: '#FFFFFF',
           muted: '#F3F4F6',
+          sunken: '#F9FAFC',
         },
         ink: {
           primary: '#0F172A',
