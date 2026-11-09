@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../auth/AuthContext.jsx';
 import { setLanguage } from '../i18n';
 import { Logo } from '../components/branding/Logo.jsx';
-import PasswordInput from '../components/ui/PasswordInput.jsx';
+
 import { ShieldIcon } from '../components/ui/icons.jsx';
 
 function MailIcon(props) {
@@ -78,9 +78,12 @@ export default function LoginPage() {
       {/* Header strip for language switcher */}
       <header className="relative">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-          <Link to="/welcome" className="flex items-center">
-            <Logo size={32} tone="light" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/welcome" className="flex items-center gap-1.5 text-sm font-medium text-ink-secondary transition hover:text-brand-primary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 19l-7-7 7-7" /></svg>
+              Back to website
+            </Link>
+          </div>
           <nav className="flex items-center gap-1" aria-label={t('common.language')}>
             {['en', 'so'].map((l) => (
               <button
@@ -146,16 +149,16 @@ export default function LoginPage() {
             <div className="flex flex-col items-center text-center">
               <Logo size={42} tone="light" />
               <p className="mt-2 text-[12px] font-medium text-ink-secondary">
-                Smart Pharmacy Management
+                {t('auth.tagline')}
               </p>
             </div>
 
             <div className="mt-8 text-center">
               <h1 className="text-xl font-semibold text-ink-primary">
-                {t('auth.signIn') || 'Sign In to Your Account'}
+                {t('auth.signInTitle')}
               </h1>
               <p className="mt-1 text-sm text-ink-secondary">
-                Access your dashboard and manage your pharmacy.
+                {t('auth.signInSubtitle')}
               </p>
             </div>
 
@@ -179,7 +182,7 @@ export default function LoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter Your Email Address"
+                  placeholder={t('auth.emailPlaceholder')}
                   className="w-full border-0 bg-transparent text-sm text-ink-primary placeholder:text-ink-muted focus:outline-none"
                 />
               </div>
@@ -188,15 +191,16 @@ export default function LoginPage() {
             {/* Password */}
             <label className="mt-3 block">
               <span className="sr-only">{t('auth.password')}</span>
-              <div className="flex items-center gap-2 rounded-xl border border-line bg-white px-3.5 py-2 transition focus-within:border-brand-primary focus-within:ring-4 focus-within:ring-brand-primary/10">
+              <div className="flex items-center gap-2 rounded-xl border border-line bg-white px-3.5 py-3 transition focus-within:border-brand-primary focus-within:ring-4 focus-within:ring-brand-primary/10">
                 <LockIcon className="shrink-0 text-ink-muted" />
-                <PasswordInput
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                <input
+                  type="password"
                   autoComplete="current-password"
                   required
-                  placeholder="Enter Your Password"
-                  className="w-full border-0 bg-transparent !px-0 !py-1.5 text-sm shadow-none focus:ring-0"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder={t('auth.passwordPlaceholder')}
+                  className="w-full border-0 bg-transparent text-sm text-ink-primary placeholder:text-ink-muted focus:outline-none"
                 />
               </div>
             </label>
@@ -210,7 +214,7 @@ export default function LoginPage() {
                   onChange={(e) => setRemember(e.target.checked)}
                   className="h-4 w-4 rounded border-line text-brand-primary focus:ring-brand-primary"
                 />
-                <span>Remember Me</span>
+                <span>{t('auth.rememberMe')}</span>
               </label>
               <Link to="/forgot-password" className="font-semibold text-brand-primary hover:underline">
                 {t('auth.forgot') || 'Forgot Password?'}
@@ -223,13 +227,13 @@ export default function LoginPage() {
               disabled={busy}
               className="mt-5 w-full rounded-xl bg-brand-primary px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-primary-dark disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {busy ? t('common.loading') : t('auth.submit') || 'Sign In'}
+              {busy ? t('common.loading') : t('auth.submit')}
             </button>
 
             {/* Trust strip */}
             <div className="mt-6 flex items-center justify-center gap-2 text-[11px] font-medium text-status-success">
               <ShieldIcon width={14} height={14} />
-              Secure and Trusted Pharmacy System
+              {t('auth.trustBadge')}
             </div>
           </form>
         </div>

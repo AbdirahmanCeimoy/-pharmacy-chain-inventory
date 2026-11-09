@@ -69,93 +69,94 @@
     }
   },
   "landing": {
-    "eyebrow": "Pharmacy chain, built for Somalia",
-    "ctaPrimary": "Open the app",
-    "ctaSecondary": "Learn more",
-    "bullets": {
-      "fefo": "First-expiry-first-out",
-      "race": "Race-safe POS",
-      "bilingual": "English + Somali"
-    },
     "hero": {
-      "headline": "Stop losing money to expired stock.",
-      "lead": "Batch-level inventory across every branch, First-Expiry-First-Out deduction at the counter, and race-safe sales. So two cashiers can never oversell the last unit.",
-      "sampleHint": "Receipts carry batch costs so profit per branch is honest, not averaged."
+      "title": "Smarter Pharmacy Management.",
+      "highlight": "Less Waste. More Profit.",
+      "subtitle": "Manage your pharmacy chain with intelligent inventory tracking, expiry control, and branch-level business insights.",
+      "exploreFeatures": "Explore Features",
+      "contactUs": "Contact Us"
     },
-    "problem": {
-      "title": "Three problems every pharmacy chain hits.",
-      "body": "Expiry losses. Phantom stock-outs. No clear view of which branch actually makes money. This system is built to kill all three."
+    "about": {
+      "eyebrow": "About Medicap",
+      "title": "Who We Are",
+      "body": "Medicap is a pharmacy chain management platform designed to help pharmacy businesses manage medicines, inventory, sales, and multiple branches through one centralized system."
     },
-    "problems": {
-      "problem1": {
-        "title": "Expired on one shelf, out-of-stock on another",
-        "body": "Without batch-level visibility and transfers, stock rots in one branch while another runs dry."
-      },
-      "problem2": {
-        "title": "Manual counting, silent errors",
-        "body": "No batches, no audit trail. A missing box looks like theft three weeks later. Too late to recover."
-      },
-      "problem3": {
-        "title": "Owners can't see profit per branch",
-        "body": "Averaged costs hide which branches are profitable. Decisions get made on hunches."
-      }
-    },
-    "features": {
-      "title": "Features",
-      "lead": "Every rule in the Somalia 10X Challenge Project 09 brief, built and tested.",
+    "solutions": {
+      "eyebrow": "Our Solutions",
+      "title": "Everything Your Pharmacy Needs",
       "items": {
-        "fefo": {
-          "title": "FEFO at the counter",
-          "body": "Every sale takes from the earliest-expiring batch first. Expired batches never sell."
-        },
-        "concurrency": {
-          "title": "Race-safe sales",
-          "body": "Two cashiers racing for the last unit? Exactly one wins. The other sees a clean out-of-stock message."
-        },
-        "transfers": {
-          "title": "Inter-branch transfers",
-          "body": "Requested → Approved (HQ above $500) → Dispatched → Received with the same batch number and expiry."
-        },
-        "expiry": {
-          "title": "Expiry dashboard",
-          "body": "Buckets for 30 / 60 / 90 days with colour-coded risk and total value at cost."
-        },
-        "profit": {
-          "title": "Honest profit per branch",
-          "body": "Cost comes from each batch actually sold. Never averaged. Returns net off revenue AND cost."
-        },
-        "controlled": {
-          "title": "Controlled drugs register",
-          "body": "Pharmacist-only, prescription required, database triggers block any edit or delete."
-        }
+        "multiBranch": "Multi-branch inventory management",
+        "batchTracking": "Medicine batch and expiry tracking",
+        "fefo": "FEFO stock allocation",
+        "pos": "Point of Sale",
+        "purchaseOrders": "Purchase orders and suppliers",
+        "transfers": "Inter-branch stock transfers",
+        "analytics": "Business analytics"
       }
     },
-    "how": {
-      "title": "How a sale works",
-      "step1": {
-        "title": "Scan or search",
-        "body": "Barcode or name lookup. Add to cart. Price is HQ-controlled and the same at every branch."
-      },
-      "step2": {
-        "title": "Pick payment",
-        "body": "Cash, EVC Plus, Zaad, eDahab. All behind a simulated adapter interface."
-      },
-      "step3": {
-        "title": "FEFO deducts",
-        "body": "SELECT…FOR UPDATE on batches ordered by expiry. The second cashier sees the updated stock. No race."
-      },
-      "step4": {
-        "title": "Receipt out",
-        "body": "Sequential receipt number (no gaps on failure), printable, COPY stamp on re-print."
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "Simple Steps to Better Management",
+      "step1": "Add medicines and suppliers.",
+      "step2": "Receive and track medicine batches.",
+      "step3": "Sell medicines using FEFO.",
+      "step4": "Monitor stock and expiry dates.",
+      "step5": "Review branch performance and profit."
+    },
+    "users": {
+      "eyebrow": "Who Uses Medicap?",
+      "title": "Built for Every Role",
+      "owner": "Pharmacy Owners / HQ",
+      "ownerDesc": "Full visibility across all branches, approve high-value orders and transfers, monitor profit per branch.",
+      "manager": "Branch Managers",
+      "managerDesc": "Manage daily operations, raise purchase orders, receive goods, handle transfers and stock counts.",
+      "pharmacist": "Pharmacists and Cashiers",
+      "pharmacistDesc": "Process sales at POS, handle prescriptions, manage controlled drugs register, print receipts."
+    },
+    "why": {
+      "eyebrow": "Why Choose Medicap?",
+      "title": "The Medicap Advantage",
+      "items": {
+        "visibility": "Centralized visibility",
+        "visibilityDesc": "See every branch, every batch, every transaction from one dashboard.",
+        "stock": "Better stock control",
+        "stockDesc": "FEFO allocation ensures oldest stock sells first, reducing waste.",
+        "expiry": "Expiry monitoring",
+        "expiryDesc": "30/60/90-day expiry buckets with value-at-cost per branch.",
+        "coordination": "Improved branch coordination",
+        "coordinationDesc": "Request, approve, dispatch, and receive stock transfers between branches.",
+        "reporting": "Clear financial reporting",
+        "reportingDesc": "Honest profit per branch based on actual batch costs, never averaged.",
+        "security": "Role-based security",
+        "securityDesc": "Server-enforced permissions on every request with full audit trail."
       }
     },
-    "cta": {
-      "title": "Try the live demo",
-      "body": "A seeded database with three branches, four roles, 16 medicines and a full working POS is a click away.",
-      "demoHint": "Demo login"
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "q1": "What is Medicap?",
+      "a1": "Medicap is a pharmacy chain management platform that helps you manage medicines, inventory, sales, and multiple branches from one centralized system.",
+      "q2": "Can I manage multiple branches?",
+      "a2": "Yes. Medicap supports multi-branch operations with centralized control from HQ, branch-level inventory, and inter-branch stock transfers.",
+      "q3": "Does Medicap track medicine expiry?",
+      "a3": "Absolutely. Every medicine batch is tracked with its expiry date. The system uses FEFO (First Expiry, First Out) to ensure the oldest stock sells first.",
+      "q4": "Does it support different user roles?",
+      "a4": "Yes. Three roles are supported: Owner/HQ with full chain access, Branch Manager with branch-level control, and Pharmacist with POS access.",
+      "q5": "Can I monitor branch performance?",
+      "a5": "Yes. The reports module shows profit per branch based on actual batch costs, plus expiry loss tracking with 30/60/90-day buckets."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions? We would love to hear from you.",
+      "email": "apdirahmanbashirapdullahi@gmail.com",
+      "phone": "+252612074218",
+      "location": "Mogadishu, Suqa-Xolaha"
     },
     "footer": {
-      "build": "Built for the Somalia 10X Challenge · Project 09"
+      "about": "About",
+      "features": "Features",
+      "login": "Login",
+      "copyright": "All rights reserved."
     }
   },
   "auth": {
@@ -168,7 +169,12 @@
     "invalid": "Invalid email or password.",
     "forgot": "Forgot Password?",
     "enterValidEmail": "Please enter a valid email address.",
-    "enterPassword": "Please enter your password."
+    "enterPassword": "Please enter your password.",
+    "tagline": "Smart Pharmacy Management",
+    "signInTitle": "Sign In to Your Account",
+    "signInSubtitle": "Access your dashboard and manage your pharmacy.",
+    "rememberMe": "Remember Me",
+    "trustBadge": "Secure and Trusted Pharmacy System"
   },
   "forgot": {
     "title": "Reset Your Password",

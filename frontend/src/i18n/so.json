@@ -65,93 +65,94 @@
     }
   },
   "landing": {
-    "eyebrow": "Silsilad farmashiyo, loogu dhisay Soomaaliya",
-    "ctaPrimary": "Fur barnaamijka",
-    "ctaSecondary": "Faahfaahin dheeraad ah",
-    "bullets": {
-      "fefo": "Kan ugu horreeya dhacaya, kan ugu horreeya iibka",
-      "race": "POS aamin ah oo tartamo ka ilaalisa",
-      "bilingual": "Ingiriis + Soomaali"
-    },
     "hero": {
-      "headline": "Jooji in lacag kaa luntaa alaab dhacday.",
-      "lead": "Alaab-maarayn heer-batch ah oo ka shaqeyn laamo kasta, ka jaridda qaabka FEFO (kan ugu horreeya dhacaya) meesha iibka, iyo iib aamin ah oo tartamo ka ilaalisa. Sidaa darteed labo iibiye marnaba kama iibsan karaan isku unugga ugu dambeeyay.",
-      "sampleHint": "Rasiidhada waxay sitaan qiimaha batch kasta si faa'iidada laan walba ay u noqoto run, aan la celcelineyn."
+      "title": "Maaraynta Farmashiyaha ee Caqliga leh.",
+      "highlight": "Khasaare Yar. Faa'iido Badan.",
+      "subtitle": "Maaree silsiladda farmashigaaga oo leh raadraac alaab caqli leh, xakamaynta dhacitaanka, iyo falanqaynta heerka laanta.",
+      "exploreFeatures": "Baro Astaamaha",
+      "contactUs": "Nala Soo Xiriir"
     },
-    "problem": {
-      "title": "Saddex dhibaato oo silsilad kasta oo farmashi la kulanto.",
-      "body": "Khasaare ka imanaya alaab dhacday. Alaab la waayo oo aan la ogeyn. Aan si cad loo arag laanta runta ah ee faa'iidada samaysa. Nidaamkan waxaa loo dhisay in saddexdaas la joojiyo."
+    "about": {
+      "eyebrow": "Ku saabsan Medicap",
+      "title": "Waa Maxay Medicap",
+      "body": "Medicap waa madal maaraynta silsiladda farmashiyaha oo loo qaabeeyay in uu ka caawiyo ganacsiyada farmashiga inay maareyaan daawooyinka, alaabta, iibka, iyo laamo badan iyagoo isticmaalaya hal nidaam dhexe."
     },
-    "problems": {
-      "problem1": {
-        "title": "Laan ay alaabtu dhacday, laan kale ay alaabtu ka dhammaatay",
-        "body": "La'aanta aragga heer-batch iyo wareejinta laamaha dhexdood, alaabta ayaa laan ku qudhmi kartaa inta laan kale ay ka dhammaanayso."
-      },
-      "problem2": {
-        "title": "Tirin gacan ah, qaladaad aan la ogaan",
-        "body": "Batch la'aan iyo diiwaan-ilaalin la'aan. Sanduuq la waayay wuxuu u ekaan karaa xatooyo saddex isbuuc ka dib. Marka la ogaadana horey u daahay."
-      },
-      "problem3": {
-        "title": "Milkiileyaasha ma arki karaan faa'iidada laan kasta",
-        "body": "Qiimo celceliska ah wuxuu qariyaa laamaha faa'iido samaysta. Go'aamada waxaa lagu qaataa malayn aan sal lahayn."
-      }
-    },
-    "features": {
-      "title": "Astaamaha",
-      "lead": "Xeer walba oo ku jira Mashruuca 09 ee Somalia 10X Challenge, waa la dhisay waana la tijaabiyay.",
+    "solutions": {
+      "eyebrow": "Xalkeena",
+      "title": "Wax Walba oo Farmashigaagu u Baahan Yahay",
       "items": {
-        "fefo": {
-          "title": "FEFO meesha iibka",
-          "body": "Iib kasta wuxuu ka qaataa batch-ka ugu horrayn dhacaya. Batch-yada dhacay marnaba lama iibin."
-        },
-        "concurrency": {
-          "title": "Iib aamin ah oo tartamo ka ilaalisa",
-          "body": "Labo iibiye u tartamaya unugga ugu dambeeya? Mid keliya ayaa guulaysta. Kan kale wuxuu arkaa fariin cad oo ah 'alaab ma jirto'."
-        },
-        "transfers": {
-          "title": "Wareejin laamaha dhexdood",
-          "body": "La codsaday → La ansixiyay (Xarunta Guud $500 ka badan) → La diray → La helay isla lambarka batch iyo taariikhda dhacitaanka."
-        },
-        "expiry": {
-          "title": "Shabakad-sare dhacitaanka",
-          "body": "Qaybo 30 / 60 / 90 maalmood ah, oo leh midabbo khatarta muujinaya iyo wadarta qiimaha."
-        },
-        "profit": {
-          "title": "Faa'iido run ah laan kasta",
-          "body": "Qiimaha wuxuu ka imanayaa batch kasta oo dhab ahaan la iibiyay. Marnaba lama celceliyo. Celinta alaabtu waxay ka jartaa dakhliga IYO qiimaha."
-        },
-        "controlled": {
-          "title": "Diiwaanka daawada xakameysan",
-          "body": "Farmashiiste kaliya, warqadda daawaynta waa loo baahan yahay, triggers database-ka waxay joojiyaan wax kasta oo wax-ka-bedel ama tir ah."
-        }
+        "multiBranch": "Maaraynta alaabta laamo badan",
+        "batchTracking": "Raadraaca batch-ka iyo dhacitaanka daawada",
+        "fefo": "Qoondaynta alaabta FEFO",
+        "pos": "Meesha Iibka",
+        "purchaseOrders": "Dalabyada iibsiga iyo alaab-qeybiyayaasha",
+        "transfers": "Wareejinta alaabta laamaha dhexdood",
+        "analytics": "Falanqaynta ganacsiga"
       }
     },
-    "how": {
-      "title": "Sida iibku u shaqeeyo",
-      "step1": {
-        "title": "Iska-sawir ama raadi",
-        "body": "Barcode ama raadin magac. Ku dar dambiisha. Qiimaha waxaa maamula Xarunta Guud, waana isku mid laan walba."
-      },
-      "step2": {
-        "title": "Dooro bixinta",
-        "body": "Lacag caddaan, EVC Plus, Zaad, eDahab. Dhammaan waxay ka shaqeeyaan adapter la jaangooyay."
-      },
-      "step3": {
-        "title": "FEFO ayaa ka jara",
-        "body": "SELECT…FOR UPDATE batch-yada oo loo soo habeeyay sida ay dhacayaan. Iibiyaha labaad wuxuu arkaa alaabta la cusbooneysiiyay. Tartan ma jiro."
-      },
-      "step4": {
-        "title": "Rasiidhka la bixiyo",
-        "body": "Lambar rasiidh isku xiga (daldaloolo khalad la'aan), la daabici karo, calaamad NUSKHO marka dib loo daabaco."
+    "howItWorks": {
+      "eyebrow": "Sidee u Shaqeeyaa",
+      "title": "Tillaabooyinka Fudud ee Maaraynta Wanaagsan",
+      "step1": "Ku dar daawooyinka iyo alaab-qeybiyayaasha.",
+      "step2": "Soo qaado oo raadraac batch-yada daawada.",
+      "step3": "Iib daawooyinka isticmaalaya FEFO.",
+      "step4": "La soco kaydka iyo taariikhaha dhacitaanka.",
+      "step5": "Dib u eeg guulda laanta iyo faa'iidada."
+    },
+    "users": {
+      "eyebrow": "Yaa isticmaala Medicap?",
+      "title": "Loo dhisay door kasta",
+      "owner": "Milkiilayaasha Farmashiga / Xarunta",
+      "ownerDesc": "Muuqaal buuxa oo laamo kasta ah, ansixinta dalabyada qiimaha badan iyo wareejinta, la socoshada faa'iidada laan kasta.",
+      "manager": "Maamulayaasha Laanta",
+      "managerDesc": "Maaree hawlaha maalinlaha, abuur dalabyada iibsiga, soo qaado alaabta, maaree wareejinta iyo tirinta.",
+      "pharmacist": "Farmashiistayaasha iyo Lacag-qaatayaasha",
+      "pharmacistDesc": "Ka shaqee iibka POS-ka, maaree qoraalada dhakhtarka, diiwaanka daawada xakamaysan, daabac rasiidho."
+    },
+    "why": {
+      "eyebrow": "Maxaad u doorataa Medicap?",
+      "title": "Faa'iidada Medicap",
+      "items": {
+        "visibility": "Muuqaal dhex-dhexaad ah",
+        "visibilityDesc": "Arag laan kasta, batch kasta, macaamil kasta hal shabakad-sare.",
+        "stock": "Xakamaynta alaabta oo fiican",
+        "stockDesc": "Qoondaynta FEFO waxay hubisaa in alaabta ugu duqda ah la iibiyo marka hore, khasaaraha la yareeyo.",
+        "expiry": "La socoshada dhacitaanka",
+        "expiryDesc": "Qaybo 30/60/90-maalmood oo leh qiime-kharash laan kasta.",
+        "coordination": "Isku-dubbaridka laamaha oo la hagaajiyay",
+        "coordinationDesc": "Codso, ansxi, dir, oo soo qaado wareejinta alaabta laamaha dhexdood.",
+        "reporting": "Warbixin maaliyadeed cad",
+        "reportingDesc": "Faa'iido run ah laan kasta oo ku salaysan kharashka dhabta ah ee batch-ka, marnaba lama celceliyo.",
+        "security": "Amniga door ku salaysan",
+        "securityDesc": "Oggolaansho server-ku ilaaliyay codsi kasta oo leh diiwaan dhamaystiran."
       }
     },
-    "cta": {
-      "title": "Tijaabi barnaamijka tusaalaha",
-      "body": "Database la soo diyaariyay oo leh saddex laamood, afar door, 16 daawo iyo POS oo si buuxda u shaqeynaya, hal gujis ayay kaa fogtahay.",
-      "demoHint": "Soo galka tusaalaha"
+    "faq": {
+      "eyebrow": "Su'aalaha Inta Badan La Isweydiiyo",
+      "title": "Su'aalaha Caadiga ah",
+      "q1": "Waa maxay Medicap?",
+      "a1": "Medicap waa madal maaraynta silsiladda farmashiyaha oo kaa caawiya inaad maarayso daawooyinka, alaabta, iibka, iyo laamo badan oo hal nidaam dhexe ah.",
+      "q2": "Laamo badan ma maareyn karaa?",
+      "a2": "Haa. Medicap wuxuu taageeraa hawlgallo laamo badan oo leh xakamayn dhexe oo ka timaada Xarunta, alaab heerka laanta, iyo wareejinta laamaha dhexdood.",
+      "q3": "Medicap ma raadraacaa dhacitaanka daawada?",
+      "a3": "Si buuxda. Batch kasta oo daawo ah waxaa la raadraacaa taariikhda dhacitaankiisa. Nidaamku wuxuu isticmaalaa FEFO (Kan ugu Horreeya ee Dhacaya, Kan ugu Horreeya ee la Iibiyo) si loo hubiyo in alaabta ugu duqda ah la iibiyo marka hore.",
+      "q4": "Door kala duwan ma taageertaa?",
+      "a4": "Haa. Saddex door ayaa la taageeraa: Milkiilaha/Xarunta oo leh gelitaan buuxa, Maamulaha Laanta oo leh maarayn heerka laanta, iyo Farmashiistaha oo leh gelitaan POS.",
+      "q5": "Ma la socon karaa guulda laanta?",
+      "a5": "Haa. Warbixinadu waxay muujisaa faa'iidada laan kasta oo ku salaysan kharashka dhabta ah ee batch-ka, iyo raadraaca khasaaraha dhacitaanka 30/60/90-maalmood."
+    },
+    "contact": {
+      "title": "Nala Soo Xiriir",
+      "subtitle": "Su'aalo ma qabtaa? Waan jeclaan lahayn inaan kaa maqalno.",
+      "email": "apdirahmanbashirapdullahi@gmail.com",
+      "phone": "+252612074218",
+      "location": "Muqdisho, Suqa-Xolaha"
     },
     "footer": {
-      "build": "Loogu dhisay Somalia 10X Challenge · Mashruuca 09"
+      "about": "Ku saabsan",
+      "features": "Astaamaha",
+      "login": "Soo Gal",
+      "copyright": "Xuquuqda oo dhan way ilaalisan yihiin."
     }
   },
   "auth": {
@@ -164,7 +165,12 @@
     "invalid": "Iimayl ama furaha-sirta ayaa khaldan.",
     "forgot": "Furaha-sirta ma illowday?",
     "enterValidEmail": "Fadlan geli iimayl sax ah.",
-    "enterPassword": "Fadlan geli furaha-sirtaada."
+    "enterPassword": "Fadlan geli furaha-sirtaada.",
+    "tagline": "Maaraynta Farmashiyaha Casriga",
+    "signInTitle": "Soo Gal Akoontaada",
+    "signInSubtitle": "Gal dashboard-kaaga oo maaree farmashiyahaaga.",
+    "rememberMe": "I Xasuuso",
+    "trustBadge": "Nidaam Farmashiye oo Ammaan ah oo La Aamino"
   },
   "forgot": {
     "title": "Dib u Deji Furaha-sirtaada",
