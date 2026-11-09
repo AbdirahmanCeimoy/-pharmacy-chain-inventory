@@ -272,7 +272,7 @@ export default function AppShell({ children }) {
           </div>
         </header>
         <main className="flex-1 overflow-x-hidden bg-surface-page">
-          <div className="mx-auto w-full max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">{children}</div>
+          <div className="mx-auto w-full max-w-7xl px-2 py-4">{children}</div>
         </main>
       </div>
     </div>

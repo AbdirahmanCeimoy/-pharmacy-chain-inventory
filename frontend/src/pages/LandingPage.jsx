@@ -32,7 +32,7 @@ function XI() {
 
 /* Pharmacy images */
 const IMG = {
-  store: '/pharmacy-store.png',
+  store: '/home-page-store.png',
   hero: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80&auto=format&fit=crop',
   about: 'https://images.unsplash.com/photo-1576602976047-174e57a47881?w=600&q=80&auto=format&fit=crop',
 };
@@ -153,10 +153,10 @@ export default function LandingPage() {
           src={IMG.store}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-[0.5px] scale-105"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover scale-105"
         />
         {/* Dark navy overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F1E4D]/85 via-[#1E3A6E]/80 to-[#3952A4]/75" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0F1E4D]/60 via-[#1E3A6E]/55 to-[#3952A4]/50" />
         {/* Decorative circles */}
         <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-brand-chart/15 blur-3xl" aria-hidden />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-brand-mint/10 blur-3xl" aria-hidden />
